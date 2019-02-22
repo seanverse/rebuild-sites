@@ -1,58 +1,542 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<title>rebuild - Building your business-systems freely!</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-		<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<meta name="description" content="ReBuild（简称
-			RB）是一个企业管理系统。提供了业务实体构建、权限管理、流程管理、数据审计、消息通知等功能，可根据不同企业的需求，依据自身的业务特征来配置系统。通过 RB
-			提供的高度可定制化基础平台，能够实现如 OA（办公自动化）、CRM（客户关系管理）、SFA（销售自动化）、SCM（供应链管理）甚至是
-			ERP（企业资源计划）等等，这主要取决于领域/行业专家对系统的配置与实施过程。">
-		<link rel="stylesheet" type="text/css"
-			href="//cdn.staticfile.org/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-		<style type="text/css">
-		body {
-			background-color: #4285f4;
-			color: #fff;
-			font-family: InterUI, -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI, Oxygen, Ubuntu, Cantarell, Open Sans, sans-serif
-		}
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>REBUILD</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="CRM, OA, 企业管理, 系统">
+	<link rel="icon" type="image/png" href="assets/images/favicon.png">
+	<link href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/site.css" rel="stylesheet" type="text/css">
+</head>
 
-		h1,
-		h2,
-		h3 {
-			font-weight: 300;
-		}
-
-		a {
-			color: #fff;
-			text-decoration: none;
-			font-size: 14px;
-			color: rgba(255, 255, 255, 1)
-		}
-
-		a:hover {
-			text-decoration: underline;
-			color: rgba(255, 255, 255, .8)
-		}
-	</style>
-	</head>
-
-	<body>
-		<div style="text-align:center;margin-top:15%">
-			<h1 style="font-size:81px;margin:21px 0;">REBUILD</h1>
-			<h2 style="font-size:41px;color:rgba(255,255,255,.8)">1.0.0 is release!</h2>
-			<br>
-			<div>
-				<a href="https://nightly.getrebuild.com/">Nightly</a>
-				&nbsp;&nbsp;·&nbsp;&nbsp;
-				<a href="https://getrebuild.com/docs/">Docs</a>
-				&nbsp;&nbsp;·&nbsp;&nbsp;
-				<a href="https://github.com/getrebuild/rebuild/">View on GitHub</a>
+<body>
+	<header class="header-area header-sticky">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<nav class="main-nav">
+						<a href="index.html" class="logo">
+							<img src="assets/images/logo.png" alt="REBUILD" />
+						</a>
+						<ul class="nav">
+							<li><a href="index.html">介绍</a></li>
+							<li><a href="https://github.com/getrebuild/rebuild/releases">下载</a></li>
+							<li><a href="docs/">文档</a></li>
+							<li class="submenu">
+								<a href="javascript:;">更多</a>
+								<ul>
+									<li><a href="https://github.com/getrebuild/rebuild/">GitHub</a></li>
+								</ul>
+							</li>
+							<li><a class="btn-nav" href="https://nightly.getrebuild.com/">立即体验</a></li>
+						</ul>
+						<a class="menu-trigger">
+							<span>菜单</span>
+						</a>
+					</nav>
+				</div>
 			</div>
 		</div>
-	</body>
+	</header>
+
+
+	<div class="welcome-area" id="welcome">
+		<div class="right-bg">
+			<img src="assets/images/photos/parallax-2.jpg" class="img-fluid float-right">
+		</div>
+		<div class="header-text">
+			<div class="container">
+				<div class="row">
+					<div class="offset-lg-3 col-lg-6 col-md-12 col-sm-12">
+						<h1>自由设计你的业务系统</h1>
+						<p>REBUILD 提供业务数据管理与分析、权限、流程、数据审计、消息通知等功能，可依据企业的不同需求，轻松设计出更加适合的业务系统。</p>
+						<div class="buttons">
+							<a href="https://nightly.getrebuild.com/" class="btn-white-line">立即体验</a>
+							<a href="https://github.com/getrebuild/rebuild/" class="btn-primary-line">GitHub</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="section home-feature" id="features">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+							<a class="features-small-item">
+								<div class="icon">
+									<i class="fa fa-github"></i>
+								</div>
+								<h5 class="features-title">免费 & 开源</h5>
+								<p>Morbilling pharetra sapiening ut mattis viverra. Curabitur magna.</p>
+							</a>
+						</div>
+						<div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+							<a class="features-small-item">
+								<div class="icon">
+									<i class="fa fa-thumbs-o-up"></i>
+								</div>
+								<h5 class="features-title">强大 & 易用</h5>
+								<p>Donec pellentesque turpis utium lorem imperdiet semper viverra.</p>
+							</a>
+						</div>
+						<div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+							<a class="features-small-item">
+								<div class="icon">
+									<i class="fa fa-laptop"></i>
+								</div>
+								<h5 class="features-title">资深团队研发</h5>
+								<p>Facilisis arcu ligula, malesuada id tincidunt laoreet, facilisis.</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section padding-top-70 padding-bottom-0">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+					<img src="assets/images/blue-1.png" class="rounded img-fluid d-block mx-auto">
+				</div>
+				<div class="col-lg-1"></div>
+				<div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+					<div class="left-heading">
+						<h2 class="section-title">Best Analytics Audits</h2>
+					</div>
+					<div class="left-text">
+						<p>Phasellus vitae velit sit amet diam semper commodo quis quis libero.
+							Morbi consequat arcu augue, molestie faucibus metus ullamcorper vel.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="hr"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section padding-bottom-100">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+					<div class="left-heading">
+						<h2 class="section-title">Deep Technical SEO</h2>
+					</div>
+					<div class="left-text">
+						<p>Phasellus vitae velit sit amet diam semper commodo quis quis libero.
+							Morbi consequat arcu augue, molestie faucibus metus ullamcorper vel.</p>
+					</div>
+				</div>
+				<div class="col-lg-1"></div>
+				<div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+					<img src="assets/images/blue-2.png" class="rounded img-fluid d-block mx-auto" alt="App">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="parallax" data-image="assets/images/photos/parallax.jpg">
+		<div class="parallax-content">
+			<div class="container">
+				<div class="row">
+					<div class="offset-lg-3 col-lg-6">
+						<div class="info">
+							<h1>功能特性</h1>
+							<p>Fusce placerat pretium mauris, vel sollicitudin elit lacinia vitae.
+								Quisque sit amet nisi erat.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-2 col-md-3 col-sm-6 col-6">
+						<a class="mini-box">
+							<i class="fa fa-calendar"></i>
+							<strong>Plan</strong>
+							<span>Morbi pharetra sapien ut mattis.</span>
+						</a>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-6 col-6">
+						<a class="mini-box">
+							<i class="fa fa-bolt"></i>
+							<strong>Idea</strong>
+							<span>Praesent mattis maximus exene.</span>
+						</a>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-6 col-6">
+						<a class="mini-box">
+							<i class="fa fa-pie-chart"></i>
+							<strong>Analysis</strong>
+							<span>Aliquam at nulla congue, laoreet.</span>
+						</a>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-6 col-6">
+						<a class="mini-box">
+							<i class="fa fa-code"></i>
+							<strong>Develop</strong>
+							<span>Quisque at arer sapiener rutrum.</span>
+						</a>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-6 col-6">
+						<a class="mini-box">
+							<i class="fa fa-server"></i>
+							<strong>Lounch</strong>
+							<span>Vivamus et nulla rhoncus lectus.</span>
+						</a>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-6 col-6">
+						<a class="mini-box">
+							<i class="fa fa-check"></i>
+							<strong>Reporting</strong>
+							<span>Sorbi pharetra sapien ut mattis.</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section hide" id="testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="center-heading">
+						<h2 class="section-title">用户评价</h2>
+					</div>
+				</div>
+				<div class="offset-lg-3 col-lg-6">
+					<div class="center-text">
+						<p>Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis
+							arcu elementum, quis congue risus volutpat.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="team-item">
+						<div class="team-content">
+							<i class="fa fa-quote-left"></i>
+							<p>Maecenas non ante sit amet ex scelerisque facilisis. Sed at orci
+								maximus, suscipit nunc, elementum arcu. Fusce in aliquet purus. Nam sit
+								amet nisi nulla.</p>
+							<div class="user-image">
+								<img src="assets/images/photos/1_001.jpg">
+							</div>
+							<div class="team-info">
+								<h3 class="user-name">Fletch Skinner</h3>
+								<span>Product Strategist</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="team-item">
+						<div class="team-content">
+							<i class="fa fa-quote-left"></i>
+							<p>Donec aliquam vulputate sem, vitae lacinia magna tincidunt at.
+								Pellentesque lobortis, lectus sit amet mollis rutrum, ante risus
+								tristique dolor, vitae luctus mauris.</p>
+							<div class="user-image">
+								<img src="assets/images/photos/2_001.jpg">
+							</div>
+							<div class="team-info">
+								<h3 class="user-name">Lance Bogrol</h3>
+								<span>Visual Designer</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="team-item">
+						<div class="team-content">
+							<i class="fa fa-quote-left"></i>
+							<p>Sed elementum eros ac scelerisque imperdiet. Donec tincidunt ipsum
+								aliquet magna ultricies lobortis. Phasellus fringilla dolor ac odio
+								interdum ultricies.</p>
+							<div class="user-image">
+								<img src="assets/images/photos/3_001.jpg">
+							</div>
+							<div class="team-info">
+								<h3 class="user-name">Valentino Morose</h3>
+								<span>Android Developer</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section colored hide" id="pricing-plans">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="center-heading">
+						<h2 class="section-title">版本价格</h2>
+					</div>
+				</div>
+				<div class="offset-lg-3 col-lg-6">
+					<div class="center-text">
+						<p>Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis
+							arcu elementum, quis congue risus volutpat.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom
+						move 50px over 0.6s after 0.2s">
+					<div class="pricing-item">
+						<div class="pricing-header">
+							<h3 class="pricing-title">BASIC PLAN</h3>
+						</div>
+						<div class="pricing-body">
+							<div class="price-wrapper">
+								<span class="currency">$</span>
+								<span class="price">13.90</span>
+								<span class="period">/Month</span>
+							</div>
+							<ul class="list">
+								<li class="active">Send 5 invoices and quotes</li>
+								<li class="active">2 Clients and Products</li>
+								<li class="active">Invoicing and Payments</li>
+								<li class="active">Enter 5 bills</li>
+								<li>Data Security and Backups</li>
+								<li>Unlimited Staff Accounts</li>
+								<li>Web Booking Widget</li>
+								<li>Monthly Reports and Analytics</li>
+							</ul>
+						</div>
+						<div class="pricing-footer">
+							<a class="btn-primary-line">Select Plan</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom
+						move 50px over 0.6s after 0.4s">
+					<div class="pricing-item active">
+						<div class="pricing-header">
+							<h3 class="pricing-title">ADVANCED PLAN</h3>
+						</div>
+						<div class="pricing-body">
+							<div class="price-wrapper">
+								<span class="currency">$</span>
+								<span class="price">23.90</span>
+								<span class="period">/Month</span>
+							</div>
+							<ul class="list">
+								<li class="active">Send 5 invoices and quotes</li>
+								<li class="active">2 Clients and Products</li>
+								<li class="active">Invoicing and Payments</li>
+								<li class="active">Enter 5 bills</li>
+								<li class="active">Data Security and Backups</li>
+								<li class="active">Unlimited Staff Accounts</li>
+								<li>Web Booking Widget</li>
+								<li>Monthly Reports and Analytics</li>
+							</ul>
+						</div>
+						<div class="pricing-footer">
+							<a class="btn-primary-line">Select Plan</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom
+						move 50px over 0.6s after 0.6s">
+					<div class="pricing-item">
+						<div class="pricing-header">
+							<h3 class="pricing-title">EXPERT PLAN</h3>
+						</div>
+						<div class="pricing-body">
+							<div class="price-wrapper">
+								<span class="currency">$</span>
+								<span class="price">33.90</span>
+								<span class="period">/Month</span>
+							</div>
+							<ul class="list">
+								<li class="active">Send 5 invoices and quotes</li>
+								<li class="active">2 Clients and Products</li>
+								<li class="active">Invoicing and Payments</li>
+								<li class="active">Enter 5 bills</li>
+								<li class="active">Data Security and Backups</li>
+								<li class="active">Unlimited Staff Accounts</li>
+								<li class="active">Web Booking Widget</li>
+								<li class="active">Monthly Reports and Analytics</li>
+							</ul>
+						</div>
+						<div class="pricing-footer">
+							<a class="btn-primary-line">Select Plan</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="parallax-counter hide" data-image="assets/images/photos/parallax-counter.jpg">
+		<div class="parallax-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="count-item elliptical-bottom">
+							<strong>126</strong>
+							<span>Projects Done</span>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="count-item elliptical-top">
+							<strong>98</strong>
+							<span>Happy Clients</span>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="count-item elliptical-bottom">
+							<strong>16</strong>
+							<span>Awards Wins</span>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="count-item">
+							<strong>8</strong>
+							<span>Country</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section hide" id="blog">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="center-heading">
+						<h2 class="section-title">Latest Blog Posts</h2>
+					</div>
+				</div>
+				<div class="offset-lg-3 col-lg-6">
+					<div class="center-text">
+						<p>Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis
+							arcu elementum, quis congue risus volutpat.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="blog-post-thumb">
+						<div class="img">
+							<img src="assets/images/photos/1.jpg">
+						</div>
+						<div class="blog-content">
+							<h3>
+								<a>5 steps to becoming GDPR compliant on
+									mobile apps</a>
+							</h3>
+							<div class="text">
+								Mauris tellus sem, ultrices varius nisl at, convallis iaculis mauris.
+								Sed eget sem vitae purus tempus dignissim.
+							</div>
+							<a class="btn-primary-line">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="blog-post-thumb">
+						<div class="img">
+							<img src="assets/images/photos/2.jpg">
+						</div>
+						<div class="blog-content">
+							<h3>
+								<a>Measuring app success through mobile
+									app analytics</a>
+							</h3>
+							<div class="text">
+								Cras imperdiet faucibus sem, a dignissim urna feugiat sed. Interdum et
+								malesuada fames ac ante ipsum.
+							</div>
+							<a class="btn-primary-line">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="blog-post-thumb">
+						<div class="img">
+							<img src="assets/images/photos/3.jpg">
+						</div>
+						<div class="blog-content">
+							<h3>
+								<a>How accessibility will influence your
+									app development</a>
+							</h3>
+							<div class="text">
+								Quisque euismod nec lacus sit amet maximus. Ut convallis sagittis lorem
+								auctor malesuada. Morbi feugiat sed.
+							</div>
+							<a class="btn-primary-line">Read More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-md-12 col-sm-12">
+					<img src="assets/images/logo-white.png" class="logo" alt="REBUILD">
+					<div class="text hide">Building your business-systems freely!</div>
+					<ul class="social hide">
+						<li><a href="https://github.com/getrebuild/"><i class="fa fa-github"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-4 col-sm-6 col-6">
+					<h5>帮助</h5>
+					<ul class="footer-nav">
+						<li><a href="docs/"><i class="fa fa-angle-right"></i><span>帮助文档</span></a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-4 col-sm-6 col-6">
+					<h5>支持</h5>
+					<ul class="footer-nav">
+						<li><a href="https://github.com/getrebuild/rebuild/issues/new"><i class="fa fa-angle-right"></i><span>问题反馈</span></a></li>
+						<li><a href="https://github.com/getrebuild/rebuild/blob/master/LICENSE"><i class="fa fa-angle-right"></i><span>许可协议</span></a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-12">
+					<h5>联系我们</h5>
+					<div class="address">
+						<p><a href="mailto:support@getrebuild.com">support@getrebuild.com</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<p class="copyright">&copy; 2019 REBUILD. 版权所有.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--
+	<script src="https://cdn.staticfile.org/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.14.7/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdn.staticfile.org/scrollReveal.js/4.0.5/scrollreveal.min.js"></script>
+	<script src="https://cdn.staticfile.org/parallax.js/1.5.0/parallax.min.js"></script>
+	<script src="https://cdn.staticfile.org/waypoints/2.0.5/waypoints.min.js"></script>
+	<script src="https://cdn.staticfile.org/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+	<script src="assets/js/site.js"></script>
+	-->
+</body>
 
 </html>
