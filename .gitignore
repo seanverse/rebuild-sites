@@ -4,3 +4,7 @@
 # MacOS
 
 .DS_Store
+
+bin/
+node_modules/
+package-lock.json
