@@ -1,9 +1,81 @@
 doctype html
 html
   head
-    title= title || 'REBUILD'
-    link(rel='stylesheet', href='/css/site.css')
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="keywords", content="REBUILD, RB, CRM, OA, 企业管理, 业务系统, 办公")
+    meta(name="description", content="免费开源，高度可定制化的企业管理系统")
+    title= title || "REBUILD"
+    link(rel="icon", type="image/png", href="/img/favicon.png")
+    link(rel="stylesheet", href="//cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css")
+    link(rel="stylesheet", href="//cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel="stylesheet", href="/css/site.css")
   body
+    //- header
+    header.header-area.header-sticky
+      div.container
+        div.row
+          div.col-12
+            nav.main-nav
+              a.logo(href="https://getrebuild.com/")
+                img(src="/img/logo.png", alt="Logo")
+              ul.nav
+                li
+                  a.active(href="/") 介绍
+                li
+                  a(href="/download.html") 下载
+                li
+                  a(href="/docs/") 文档
+                li.submenu
+                  a(href="javascript:;") 更多
+                  ul
+                    li
+                      a(href="https://github.com/getrebuild/rebuild/") GitHub
+                li
+                  a.btn-nav(href="https://nightly.getrebuild.com/") 立即体验
+              a.menu-trigger
+                span 菜单
+
+    //- content
     block content
 
-    #foot div
+    //- footer
+    footer
+      div.container
+        div.row
+          div.col-lg-5.col-md-12.col-sm-12
+            img.logo(src="/img/logo-white.png", alt="Logo")
+            div.text Made by <i class="fa fa-github"></i> + <i class="fa fa-heart"></i>
+          div.col-lg-2.col-md-4.col-sm-6.col-6
+            h5 帮助
+            ul.footer-nav
+              li
+                a(href="/docs/")
+                  i.fa.fa-angle-right
+                  span 帮助文档
+          div.col-lg-2.col-md-4.col-sm-6.col-6
+            h5 支持
+            ul.footer-nav
+              li
+                a(href="https://github.com/getrebuild/rebuild/issues/new")
+                  i.fa.fa-angle-right
+                  span 问题反馈
+              li
+                a(href="https://github.com/getrebuild/rebuild/blob/master/LICENSE")
+                  i.fa.fa-angle-right
+                  span 许可协议
+          div.col-lg-3.col-md-4.col-sm-12
+            h5 联系我们
+            div.address
+              p 邮箱: getrebuild@sina.com
+              p 电话: (86) 17187472172
+
+        //- copyright
+        div.row
+          div.col-lg-12
+            p.copyright &copy; 2019 REBUILD 版权所有 · 遵循 GPL3.0 许可协议
+
+    script(src="//cdn.staticfile.org/jquery/2.1.4/jquery.min.js")
+    script(src="//cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js")
+    script(src="//cdn.staticfile.org/parallax.js/1.5.0/parallax.min.js")
+    script(src="/js/site.js")
