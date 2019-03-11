@@ -1,6 +1,7 @@
-var createError = require('http-errors')
 var express = require('express')
 var path = require('path')
+var i18n = require('i18n')
+var createError = require('http-errors')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
 
@@ -20,6 +21,15 @@ app.use(express.urlencoded({
 }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
+
+app.use(() => {
+  i18n.configure({
+    locales: ['en', 'zh-cn'],
+    directory: __dirname + '/locales',
+    defaultLocale: 'zh-cn'
+  })
+  return i18n.init
+})
 
 app.use('/', indexRouter)
 app.use('/docs', docsRouter)

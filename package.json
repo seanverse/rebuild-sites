@@ -1,19 +1,29 @@
 {
   "name": "rebuild-site",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
+  "description": "rebuild offical website and docs-hub",
+  "version": "2.0.0",
+  "author": "RB <getrebuild@sina.com> (https://github.com/getrebuild)",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/getrebuild/rebuild-site.git"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0",
+    "i18n": "^0.8.3",
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
-    "eslint": "^5.15.1"
+    "browser-sync": "^2.26.3",
+    "debug": "~2.6.9",
+    "eslint": "^5.15.1",
+    "gulp": "^4.0.0",
+    "gulp-nodemon": "^2.4.2",
+    "morgan": "~1.9.0"
+  },
+  "scripts": {
+    "start": "node ./bin/www"
   }
 }

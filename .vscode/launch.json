@@ -6,7 +6,9 @@
   "configurations": [{
     "type": "node",
     "request": "launch",
-    "name": "Launch App",
-    "program": "${workspaceFolder}/bin/www"
+    "name": "Launch",
+    "program": "${workspaceFolder}/bin/www",
+    "stopOnEntry": true,
+    "cwd": "${workspaceFolder}"
   }]
 }
