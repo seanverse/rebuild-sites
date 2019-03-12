@@ -3,9 +3,9 @@ var path = require('path')
 var createError = require('http-errors')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
-var i18next = require('i18next'),
-  i18nextMiddleware = require('i18next-express-middleware'),
-  i18nextBackend = require('i18next-node-fs-backend')
+var i18next = require('i18next')
+var i18nextMiddleware = require('i18next-express-middleware')
+var i18nextBackend = require('i18next-node-fs-backend')
 
 var indexRouter = require('./routes/index')
 var docsRouter = require('./routes/docs')
@@ -47,14 +47,11 @@ app.use('/docs2', docsRouter)
 app.use(function (req, res, next) {
   next(createError(404))
 })
-
 // error handler
-// eslint-disable-next-line no-unused-vars
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
   // set locals, only providing error in development
   res.locals.message = err.message
   res.locals.error = req.app.get('env') === 'development' ? err : {}
-
   // render the error page
   res.status(err.status || 500)
   res.render('error')
