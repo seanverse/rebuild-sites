@@ -1,7 +1,7 @@
 ## rebuild-site
 rebuild offical website and document hub.
 
-## Install
+## Install & Run
 ```
 $ npm install
 $ gulp server
