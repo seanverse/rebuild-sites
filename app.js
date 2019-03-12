@@ -1,9 +1,11 @@
 var express = require('express')
 var path = require('path')
-// var i18n = require('i18n')
 var createError = require('http-errors')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
+var i18next = require('i18next'),
+  i18nextMiddleware = require('i18next-express-middleware'),
+  i18nextBackend = require('i18next-node-fs-backend')
 
 var indexRouter = require('./routes/index')
 var docsRouter = require('./routes/docs')
@@ -22,14 +24,28 @@ app.use(express.urlencoded({
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-// app.use(() => {
-//   i18n.configure({
-//     locales: ['en', 'zh-cn'],
-//     directory: __dirname + '/locales',
-//     defaultLocale: 'zh-cn'
-//   })
-//   return i18n.init
-// })
+i18next.use(i18nextBackend)
+  .use(i18nextMiddleware.LanguageDetector)
+  .init({
+    backend: {
+      loadPath: __dirname + '/locales/{{lng}}.json',
+      addPath: __dirname + '/locales/{{lng}}.missing.json'
+    },
+    fallbackLng: 'zh-CN',
+    saveMissing: true,
+    detection: {
+      caches: ['cookie']
+    }
+  })
+app.use(i18nextMiddleware.handle(i18next))
+
+app.use((req, res, next) => {
+  var lng = req.query['lng']
+  if (lng) {
+    req.i18n.changeLanguage(lng)
+  }
+  next()
+})
 
 app.use('/', indexRouter)
 app.use('/docs', docsRouter)

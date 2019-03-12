@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "home": "Intro",
+    "download": "Download",
+    "document": "Docs",
+    "more": "More",
+    "freeTry": "FREE TRY",
+    "menu": "Menu"
+  },
+  "home": {
+    "slogan": "Building your business-systems freely!",
+    "introduction": "REBUILD provides you with business data management and analysis, permissions and flows, data auditing, message notification and other powerful functions, and can easily design a more suitable business system according to the different needs of enterprises."
+  }
+}

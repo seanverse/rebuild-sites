@@ -28,20 +28,20 @@ html
                 img(src="/img/logo.png", alt="Logo")
               ul.nav
                 li
-                  a.active(href="/") 介绍
+                  a.active(href="/") #{t('nav.home')}
                 li
-                  a(href="https://github.com/getrebuild/rebuild/releases") 下载
+                  a(href="https://github.com/getrebuild/rebuild/releases") #{t('nav.download')}
                 li
-                  a(href="/docs/") 文档
+                  a(href="/docs/") #{t('nav.document')}
                 li.submenu
-                  a(href="javascript:;") 更多
+                  a(href="javascript:;") #{t('nav.more')}
                   ul
                     li
                       a(href="https://github.com/getrebuild/rebuild/") GitHub
                 li
-                  a.btn-nav(href="https://nightly.getrebuild.com/") 立即体验
+                  a.btn-nav(href="https://nightly.getrebuild.com/") #{t('nav.freeTry')}
               a.menu-trigger
-                span 菜单
+                span #{t('nav.menu')}
 
     //- content
     block content
