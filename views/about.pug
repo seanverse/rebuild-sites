@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  div.page
+    div.cover(data-image="/img/photos/header.jpg")
+      div.cover-top
+        div.container
+          div.row
+            div.offset-lg-3.col-lg-6
+              h1 关于
+              p 关于我们
+      div.cover-bottom
+        div.container
+          div.row
+            div.col-lg-12
+              ol.breadcrumb
+                li
+                  a(href="/") 首页
+                li.active 关于
+
+    div.page-bottom
+      div.container
+          div.row
+            div.col-lg-12
+              div.about
+                div.row
+                  div.col-lg-6.col-md-6.col-sm-12.align-self-center
+                    div.about-image
+                      img.img-fluid(src="/img/photos/about-1.jpg")
+                      a.play
+                        i.fa.fa-play
+                  div.col-lg-6.col-md-6.col-sm-12.align-self-center.mobile-top-fix
+                    h2 关于我们
+                    h3 关于我们
+                    p 关于我们
+                    a.btn-line 联系我们
+          
