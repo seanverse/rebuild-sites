@@ -2332,6 +2332,7 @@ footer h5 {
   letter-spacing: 0.69px;
   line-height: 30px;
   margin-bottom: 30px !important;
+  text-transform: uppercase;
 }
 
 footer .social {
@@ -3551,4 +3552,17 @@ img.logo {
   height: 70px;
   padding-top: 17px;
   padding-left: 3px;
+}
+
+footer .social.lng {
+  margin-top: 4px;
+}
+
+
+footer .social.lng a {
+  font-size: 14px;
+}
+
+footer .address {
+  padding-top: 3px;
 }

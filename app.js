@@ -31,6 +31,7 @@ i18next.use(i18nextBackend)
       loadPath: __dirname + '/locales/{{lng}}.json',
       addPath: __dirname + '/locales/{{lng}}.missing.json'
     },
+    whitelist: ['en', 'zh-CN'],
     fallbackLng: 'zh-CN',
     saveMissing: true,
     detection: {
@@ -39,16 +40,8 @@ i18next.use(i18nextBackend)
   })
 app.use(i18nextMiddleware.handle(i18next))
 
-app.use((req, res, next) => {
-  var lng = req.query['lng']
-  if (lng) {
-    req.i18n.changeLanguage(lng)
-  }
-  next()
-})
-
 app.use('/', indexRouter)
-app.use('/docs', docsRouter)
+app.use('/docs2', docsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

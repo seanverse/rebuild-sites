@@ -3,8 +3,8 @@ html
   head
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    meta(name="keywords", content="REBUILD, RB, CRM, OA, 企业管理, 业务系统, 办公")
-    meta(name="description", content="免费开源，高度可定制化的企业管理系统")
+    meta(name="keywords", content= keywords || 'RB, REBUILD')
+    meta(name="description", content= description)
     title= title || "REBUILD"
     link(rel="icon", type="image/png", href="/img/favicon.png")
     link(rel="stylesheet", href="//cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css")
@@ -52,35 +52,42 @@ html
         div.row
           div.col-lg-5.col-md-12.col-sm-12
             img.logo(src="/img/logo-white.png", alt="Logo")
-            div.text Made by <i class="fa fa-github"></i> + <i class="fa fa-heart"></i>
+            div.text
+            ul.social.lng
+              li
+                i.fa.fa-globe(style="color:#fff;font-size:15px;")
+              li
+                a(href="?lng=en") EN
+              li
+                a(href="?lng=zh-CN") 中文
           div.col-lg-2.col-md-4.col-sm-6.col-6
-            h5 帮助
+            h5 #{t('nav.help')}
             ul.footer-nav
               li
                 a(href="/docs/")
                   i.fa.fa-angle-right
-                  span 帮助文档
+                  span #{t('nav.helpDoc')}
           div.col-lg-2.col-md-4.col-sm-6.col-6
-            h5 支持
+            h5 #{t('nav.support')}
             ul.footer-nav
               li
                 a(href="https://github.com/getrebuild/rebuild/issues/new")
                   i.fa.fa-angle-right
-                  span 问题反馈
+                  span #{t('nav.newIssue')}
               li
                 a(href="https://github.com/getrebuild/rebuild/blob/master/LICENSE")
                   i.fa.fa-angle-right
-                  span 许可协议
+                  span #{t('nav.license')}
           div.col-lg-3.col-md-4.col-sm-12
-            h5 联系我们
+            h5 #{t('nav.contactUs')}
             div.address
-              p 邮箱: getrebuild@sina.com
-              p 电话: (86) 17187472172
+              p #{t('nav.email')}: getrebuild@sina.com
+              p #{t('nav.phone')}: (86) 17187472172
 
         //- copyright
         div.row
           div.col-lg-12
-            p.copyright &copy; 2019 REBUILD 版权所有 · 遵循 GPL3.0 许可协议
+            p.copyright &copy; #{t('nav.copyright')}
 
     script(src="//cdn.staticfile.org/jquery/2.1.4/jquery.min.js")
     script(src="//cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js")
