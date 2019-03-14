@@ -3554,13 +3554,13 @@ img.logo {
   padding-left: 3px;
 }
 
-footer .social.lng {
-  margin-top: 4px;
+footer .copyright p.lng {
+  margin-top: 6px;
 }
 
-
-footer .social.lng a {
-  font-size: 14px;
+footer .copyright p.lng span {
+  margin: 0 1px;
+  padding: 0 2px;
 }
 
 footer .address {

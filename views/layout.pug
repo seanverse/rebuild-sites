@@ -52,14 +52,12 @@ html
         div.row
           div.col-lg-5.col-md-12.col-sm-12
             img.logo(src="/img/logo-white.png", alt="Logo")
-            div.text
-            ul.social.lng
+            div.text.hide
+            ul.social.hide
               li
-                i.fa.fa-globe(style="color:#fff;font-size:15px;")
-              li
-                a(href="?lng=en") EN
-              li
-                a(href="?lng=zh-CN") 中文
+                a(href="https://github.com/getrebuild/")
+                  i.fa.fa-github
+              
           div.col-lg-2.col-md-4.col-sm-6.col-6
             h5 #{t('nav.help')}
             ul.footer-nav
@@ -87,7 +85,15 @@ html
         //- copyright
         div.row
           div.col-lg-12
-            p.copyright &copy; #{t('nav.copyright')}
+            div.copyright
+              p &copy; #{t('nav.copyright')} 沪ICP备15028736号
+              p.lng
+                span 
+                  i.fa.fa-globe
+                span 
+                  a(href="?lng=en") EN
+                span 
+                  a(href="?lng=zh-CN") 中文
 
     script(src="//cdn.staticfile.org/jquery/2.1.4/jquery.min.js")
     script(src="//cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js")
