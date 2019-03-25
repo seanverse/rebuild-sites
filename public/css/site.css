@@ -796,7 +796,7 @@ header
   color: #2890C8;
 }
 
-.header-area.header-sticky .nav li a.btn-nav {
+.header-area.header-sticky .nav li a.btn-nav, .btn-primary-line.colored {
   border: 1px solid #2890C8;
   color: #2890C8;
 }
