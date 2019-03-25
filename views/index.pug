@@ -21,7 +21,7 @@ block content
       div.row
         div.col-lg-12
           div.row
-            - var home_feats = [['github', '免费开源', '一款优秀的产品从不会惧怕将自己完全开放，接受所有人的审视'], ['thumbs-o-up', '强大易用', '强大意味着可以满足各项需求，易用则可以更快的在企业内部推动信息化落地'], ['trophy', '资深团队', '我们拥有超过 10 年的企业产品研发与实施经验，深知企业所想所需']]
+            - var home_feats = [['github', t('home.opensource.title'),  t('home.opensource.desc')], ['thumbs-o-up', t('home.selfdesign.title'), t('home.selfdesign.desc')], ['trophy', t('home.vpteam.title'), t('home.vpteam.desc')]]
               each item in home_feats
                 div.col-lg-4.col-md-6.col-sm-6.col-12
                   a.features-small-item
@@ -95,14 +95,14 @@ block content
             div.pricing-body
               div.price-wrapper
                 span.currency ¥
-                span.price 99
+                span.price 299
                 span.period
               ul.list
                 li.active 商业授权许可
                 li.active 1 个开发者
                 li.active 版本更新 (Major)
                 li.active GitHub 支持
-                li.active - 
+                li - 
                 li.active 不可二次分发
             div.pricing-footer
               a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=BuyDeveloper") 立即购买
@@ -113,14 +113,14 @@ block content
             div.pricing-body
               div.price-wrapper
                 span.currency ¥
-                span.price 499
+                span.price 2999
                 span.period 起
               ul.list
                 li.active 商业授权许可
                 li.active 8 个开发者
                 li.active 版本更新 (Major)
                 li.active GitHub 支持
-                li.active 提供线上培训 (按需收费)
+                li.active 提供线上培训 (额外收费)
                 li.active 不可二次分发
             div.pricing-footer
               a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=BuyTeam") 立即购买
@@ -131,21 +131,21 @@ block content
             div.pricing-body
               div.price-wrapper
                 span.currency ¥
-                span.price 1999
+                span.price 39999
                 span.period 起
               ul.list
                 li.active 商业授权许可
                 li.active 无限制开发者
                 li.active 版本更新 (Major)
                 li.active 专业在线支持
-                li.active 提供上门培训 (按需收费)
+                li.active 提供上门培训 (额外收费)
                 li.active 不可二次分发
             div.pricing-footer
               a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=BuyOrganization") 立即购买
       div.row
         div.offset-lg-2.col-lg-8
-          div.center-text
+          div.center-text.margin-bottom-0
             div(style="margin:20px 0")
               span.oem-icon
                 i.fa.fa-building
-            p 同时我们也提供了可供二次分发的 OEM/SaaS 授权许可，详情请 <a href="mailto:getrebuild@sina.com?subject=BuyOEM">联系我们</a>
+            p.margin-bottom-0 同时我们也提供了可供二次分发的 OEM/SaaS 授权许可，详情请 <a href="mailto:getrebuild@sina.com?subject=BuyOEM">联系我们</a>

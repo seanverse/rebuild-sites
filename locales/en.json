@@ -21,6 +21,18 @@
     "keywords": "REBUILD, RB, CRM, OA, business, systems, offical",
     "description": "Free and Open source business-systems",
     "slogan": "Building your business-systems freely!",
-    "introduction": "REBUILD provides you with business data management and analysis, permissions and flows, data auditing, message notification and other powerful functions, and can easily design a more suitable business system according to the different needs of enterprises."
+    "introduction": "REBUILD provides you with business data management and analysis, permissions and flows, data auditing, message notification and other powerful functions, and can easily design a more suitable business system according to the different needs of enterprises.",
+    "opensource": {
+      "title": "Open Source",
+      "desc": "The source code of REBUILD is completely open, you can modify it within the license"
+    },
+    "selfdesign": {
+      "title": "Freely Design",
+      "desc": "You can design your own business system according to the needs of enterprise processes"
+    },
+    "vpteam": {
+      "title": "VP Team",
+      "desc": "We have more than 10 years of experience in enterprise product development"
+    }
   }
 }

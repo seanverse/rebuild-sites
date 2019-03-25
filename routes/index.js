@@ -3,6 +3,7 @@ var router = express.Router()
 
 router.get('/', function (req, res) {
   res.render('index', {
+    pretty: process.env.NODE_ENV === 'development',
     title: req.t('home.title'),
     keywords: req.t('home.keywords'),
     description: req.t('home.description')
@@ -11,15 +12,15 @@ router.get('/', function (req, res) {
 
 router.get('/download', function (req, res) {
   res.render('download', {
-    title: '下载 REBUILD',
-    pretty: true
+    pretty: process.env.NODE_ENV === 'development',
+    title: '下载 REBUILD'
   })
 })
 
 router.get('/about', function (req, res) {
   res.render('about', {
-    title: '关于我们',
-    pretty: true
+    pretty: process.env.NODE_ENV === 'development',
+    title: '关于我们'
   })
 })
 
