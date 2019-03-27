@@ -162,7 +162,7 @@ body {
 
 .section {
   position: relative;
-  padding-top: 100px;
+  padding-top: 90px;
   padding-bottom: 80px;
 }
 
@@ -174,7 +174,7 @@ body {
   bottom: 0px;
   width: 100%;
   height: 1px;
-  margin-top: 100px;
+  margin-top: 80px;
   border-bottom: 1px solid #E9E9E9;
 }
 
@@ -1082,7 +1082,7 @@ welcome
 
 @media (max-width: 991px) {
   .welcome-area {
-    margin-top: 80px;
+    margin-top: 60px;
     background: #fff;
   }
 
@@ -1118,7 +1118,7 @@ welcome
 
   .welcome-area .header-text h1 {
     font-weight: 600;
-    font-size: 20px !important;
+    font-size: 24px !important;
     line-height: 30px !important;
     margin-bottom: 10px !important;
     text-align: center;
@@ -1451,7 +1451,7 @@ parallax & home seperator
   display: block;
 }
 
-.parallax .parallax-content .info h1 {
+.parallax .parallax-content .info h2 {
   color: #fff;
   font-weight: 400;
   font-size: 30px;
