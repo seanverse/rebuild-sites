@@ -6,7 +6,7 @@
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/getrebuild/rebuild-site.git"
+    "url": "git://github.com/getrebuild/website.git"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
