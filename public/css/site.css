@@ -1793,6 +1793,7 @@ pricing
   left: 0px;
   right: 0px;
   margin: auto;
+  text-transform: uppercase;
 }
 
 .pricing-item .pricing-body {

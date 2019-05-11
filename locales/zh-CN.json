@@ -1,4 +1,6 @@
 {
+  "contactUs": "联系我们",
+  "indexPage": "首页",
   "nav": {
     "home": "介绍",
     "download": "下载",
@@ -33,7 +35,80 @@
     "vpteam": {
       "title": "资深团队",
       "desc": "我们拥有超过 10 年的企业产品研发与实施经验，深知企业所想所需"
+    },
+    "yourneed": {
+      "title": "你需要什么",
+      "desc": "在产品选型时，常常会被市面上为数众多的候选品带入困境，究竟如何选择？",
+      "desc2": "除了能夠满足日常业务需求，系统的可扩展性、灵活性、稳定性及性能也是十分重要的考察指标。REBUILD 通过强大的自定义功能实现“自进化”来满足企业不断增长的业务需求。领先于行业的系统测试覆指标可保障系统稳定及性能。"
+    },
+    "letimplemented": {
+      "title": "让信息化真正落地",
+      "desc": "很多时候，信息化并不能很好的在企业内部落地，除了企业自身的决心与执行力，实施过程和产品易用性也至关重要。",
+      "desc2": "“三分靠软件，七分靠实施”，可见实施过程对于最终产品的重要性。REBUILD 团队拥有超过 10 年的行业经验，能够打造出更加好用、易用，并符合企业流程的产品，让员工爱用、愿意用，使信息化真正落地。"
     }
+  },
+  "feature": {
+    "title": "功能特性",
+    "subtitle": "REBUILD 具备强大的功能特性，满足企业日常经营所需。同时保持不断的更新迭代，推出更多新特性，优化现有特性。",
+    "entity": {
+      "title": "业务实体",
+      "desc": "自由设计，快速适应需求变化"
+    },
+    "permission": {
+      "title": "权限管理",
+      "desc": "灵活控制，分级权限有条不紊"
+    },
+    "auditing": {
+      "title": "数据审计",
+      "desc": "跟踪数据历史，不怕任何数据纰漏"
+    },
+    "analytics": {
+      "title": "数据分析",
+      "desc": "丰富的分析图表，经营数据一目了然"
+    },
+    "migration": {
+      "title": "数据导入",
+      "desc": "历史经营数据，随心导入"
+    },
+    "freely": {
+      "title": "自由开发",
+      "desc": "随时获得最新源码，开始开发"
+    }
+  },
+  "buylicense": {
+    "title": "开始使用",
+    "desc": "REBUILD 是一款开源产品，使用 GPL3.0 许可协议，你的任何修改/分发等都必须遵守此协议。如果出于商业目的使用，请购买 REBUILD 商业授权许可。"
+  },
+  "license": {
+    "currency": "¥",
+    "starting": "起",
+    "commercial": "商业授权许可",
+    "1developers": "1 个开发者",
+    "ndevelopers": "8 个开发者",
+    "xdevelopers": "无限制开发者",
+    "versionSupport": "版本更新 (Major)",
+    "githubSupport": "GitHub 支持",
+    "onlineSupport": "专业在线支持",
+    "onlineTraining": "提供线上培训 (额外收费)",
+    "roomTraining": "提供上门培训 (额外收费)",
+    "noDistribution": "不可二次分发",
+    "buynow": "立即购买",
+    "moreSupport": "同时我们也提供了可供二次分发的 OEM/SaaS 授权许可，详情请",
+    "forDetail": "",
+    "personal": {
+      "title": "个人授权",
+      "price": "399"
+    },
+    "team": {
+      "title": "团队授权",
+      "price": "2999"
+    },
+    "company": {
+      "title": "企业授权",
+      "price": "49999"
+    }
+  },
+  "download": {
+    "byGithub": "至 GitHub 下载"
   }
-
 }

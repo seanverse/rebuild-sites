@@ -39,10 +39,10 @@ block content
         div.col-lg-1
         div.col-lg-6.col-md-12.col-sm-12.align-self-center.mobile-top-fix
           div.left-heading
-            h3.section-title 你需要什么
+            h3.section-title #{t('home.yourneed.title')}
           div.left-text
-            p 在产品选型时，常常会被市面上为数众多的候选品带入困境，究竟如何选择？
-            p 除了能夠满足日常业务需求，系统的可扩展性、灵活性、稳定性及性能也是十分重要的考察指标。REBUILD 通过强大的自定义功能实现“自进化”来满足企业不断增长的业务需求。领先于行业的系统测试覆指标可保障系统稳定及性能。
+            p #{t('home.yourneed.desc')}
+            p #{t('home.yourneed.desc2')}
       div.row
         div.col-lg-12
           div.hr
@@ -51,10 +51,10 @@ block content
       div.row
         div.col-lg-6.col-md-12.col-sm-12.align-self-center.mobile-bottom-fix
           div.left-heading
-            h3.section-title 让信息化真正落地
+            h3.section-title #{t('home.letimplemented.title')}
           div.left-text
-            p 很多时候，信息化并不能很好的在企业内部落地，除了企业自身的决心与执行力，实施过程和产品易用性也至关重要。
-            p “三分靠软件，七分靠实施”，可见实施过程对于最终产品的重要性。REBUILD 团队拥有超过 10 年的行业经验，能够打造出更加好用、易用，并符合企业流程的产品，让员工爱用、愿意用，使信息化真正落地。
+            p #{t('home.letimplemented.desc')}
+            p #{t('home.letimplemented.desc2')}
         div.col-lg-1
         div.col-lg-5.col-md-12.col-sm-12.align-self-center.mobile-bottom-fix-big
           img.rounded.img-fluid.d-block.mx-auto(src="/img/blue-1.png")
@@ -66,10 +66,10 @@ block content
         div.row
           div.offset-lg-3.col-lg-6
             div.info
-              h2 功能特性
-              p REBUILD 具备强大的功能特性，满足企业日常经营所需。同时保持不断的更新迭代，推出更多新特性，优化现有特性。
+              h2 #{t('feature.title')}
+              p #{t('feature.subtitle')}
         div.row
-          - var major_feats = [['cubes', '业务实体', '自由设计，快速适应需求变化'], ['bolt', '权限管理', '灵活控制，权限分级有条不紊'], ['check', '数据审计', '跟踪数据历史，不怕任何数据纰漏'], ['pie-chart', '数据分析', '各类分析图表，经营数据一目了然'], ['cloud-upload', '数据导入', '历史经营数据，随心导入'], ['code', '自由开发', '随时获得最新源码，开始开发']]
+          - var major_feats = [['cubes', t('feature.entity.title'), t('feature.entity.desc')], ['bolt', t('feature.permission.title'), t('feature.permission.desc')], ['check', t('feature.auditing.title'), t('feature.auditing.desc')], ['pie-chart', t('feature.analytics.title'), t('feature.analytics.desc')], ['cloud-upload', t('feature.migration.title'), t('feature.migration.desc')], ['code', t('feature.freely.title'), t('feature.freely.desc')]]
             each item in major_feats
               div.col-lg-2.col-md-3.col-sm-6.col-6
                 a.mini-box
@@ -83,69 +83,69 @@ block content
       div.row
         div.col-lg-12
           div.center-heading
-            h2.section-title 开始使用
+            h2.section-title #{t('buylicense.title')}
         div.offset-lg-3.col-lg-6
           div.center-text
-            p REBUILD 是一款开源产品，使用 <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL3.0</a> 许可协议，你的任何修改/分发等都必须遵守此协议。如果出于商业目的使用，请购买 REBUILD 商业授权许可。
+            p #{t('buylicense.desc')}
       div.row
         div.col-lg-4.col-md-6.col-sm-12
           div.pricing-item
             div.pricing-header
-              h3.pricing-title 个人授权
+              h3.pricing-title #{t('license.personal.title')}
             div.pricing-body
               div.price-wrapper
-                span.currency ¥
-                span.price 399
+                span.currency #{t('license.currency')}
+                span.price #{t('license.personal.price')}
                 span.period
               ul.list
-                li.active 商业授权许可
-                li.active 1 个开发者
-                li.active 版本更新 (Major)
-                li.active GitHub 支持
+                li.active #{t('license.commercial')}
+                li.active #{t('license.1developers')}
+                li.active #{t('license.versionSupport')}
+                li.active #{t('license.githubSupport')}
                 li - 
-                li.active 不可二次分发
+                li.active #{t('license.noDistribution')}
             div.pricing-footer
-              a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=BuyDeveloper") 立即购买
+              a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=BuyLicense") #{t('license.buynow')}
         div.col-lg-4.col-md-6.col-sm-12
           div.pricing-item
             div.pricing-header
-              h3.pricing-title 团队授权
+              h3.pricing-title #{t('license.team.title')}
             div.pricing-body
               div.price-wrapper
-                span.currency ¥
-                span.price 2999
-                span.period 起
+                span.currency #{t('license.currency')}
+                span.price #{t('license.team.price')}
+                span.period #{t('license.starting')}
               ul.list
-                li.active 商业授权许可
-                li.active 8 个开发者
-                li.active 版本更新 (Major)
-                li.active GitHub 支持
-                li.active 提供线上培训 (额外收费)
-                li.active 不可二次分发
+                li.active #{t('license.commercial')}
+                li.active #{t('license.ndevelopers')}
+                li.active #{t('license.versionSupport')}
+                li.active #{t('license.githubSupport')}
+                li.active #{t('license.onlineTraining')}
+                li.active #{t('license.noDistribution')}
             div.pricing-footer
-              a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=BuyTeam") 立即购买
+              a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=BuyLicense") #{t('license.buynow')}
         div.col-lg-4.col-md-6.col-sm-12
           div.pricing-item
             div.pricing-header
-              h3.pricing-title 企业授权
+              h3.pricing-title #{t('license.company.title')}
             div.pricing-body
               div.price-wrapper
-                span.currency ¥
-                span.price 19999
-                span.period 起
+                span.currency #{t('license.currency')}
+                span.price #{t('license.company.price')}
+                span.period #{t('license.starting')}
               ul.list
-                li.active 商业授权许可
-                li.active 无限制开发者
-                li.active 版本更新 (Major)
-                li.active 专业在线支持
-                li.active 提供上门培训 (额外收费)
-                li.active 不可二次分发
+                li.active #{t('license.commercial')}
+                li.active #{t('license.xdevelopers')}
+                li.active #{t('license.versionSupport')}
+                li.active #{t('license.onlineSupport')}
+                li.active #{t('license.roomTraining')}
+                li.active #{t('license.noDistribution')}
             div.pricing-footer
-              a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=BuyOrganization") 立即购买
+              a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=BuyLicense") #{t('license.buynow')}
       div.row
         div.offset-lg-2.col-lg-8
           div.center-text.margin-bottom-0
             div(style="margin:20px 0")
               span.oem-icon
                 i.fa.fa-building
-            p.margin-bottom-0 同时我们也提供了可供二次分发的 OEM/SaaS 授权许可，详情请 <a href="mailto:getrebuild@sina.com?subject=BuyOEM">联系我们</a>
+            p.margin-bottom-0 #{t('license.moreSupport')} <a href="mailto:getrebuild@sina.com?subject=BuyOEM">#{t('contactUs')}</a> #{t('license.forDetail')}

@@ -1,4 +1,6 @@
 {
+  "contactUs": "Contact us",
+  "indexPage": "Home",
   "nav": {
     "home": "Intro",
     "download": "Download",
@@ -33,6 +35,80 @@
     "vpteam": {
       "title": "VP Team",
       "desc": "We have more than 10 years of experience in enterprise product development"
+    },
+    "yourneed": {
+      "title": "What do you need",
+      "desc": "In the selection of products, it is often brought to the forefront by a large number of candidates on the market. How to choose?",
+      "desc2": "In addition to meeting the daily business needs, system scalability, flexibility, stability and performance are also important indicators. REBUILD achieves \"self-evolution\" with powerful customization capabilities to meet the growing business needs of the enterprise. Industry-leading system test coverage indicators ensure system stability and performance."
+    },
+    "letimplemented": {
+      "title": "Let informatization implemented",
+      "desc": "In many cases, informatization does not work well within the company. In addition to the company's own determination and execution, the implementation process and product usability are also crucial.",
+      "desc2": "\"Three-point software, seven-point implementation\" can see the importance of the implementation process for the final product. With more than 10 years of industry experience, the REBUILD team is able to create products that are easier to use, easier to use, and compliant with business processes, so that employees love and use them to make information technology truly come true."
     }
+  },
+  "feature": {
+    "title": "Features",
+    "subtitle": "REBUILD has powerful features to meet the daily business needs of the company. While maintaining constant iterations of updates, new features are introduced to optimize existing features.",
+    "entity": {
+      "title": "Custom Entity",
+      "desc": "Quickly design to the business changes"
+    },
+    "permission": {
+      "title": "Permission",
+      "desc": "Flexible control, hierarchical authority"
+    },
+    "auditing": {
+      "title": "Data Audit",
+      "desc": "Track data history, not afraid of any data leaks"
+    },
+    "analytics": {
+      "title": "Analysis",
+      "desc": "Rich analysis charts, business data at a glance"
+    },
+    "migration": {
+      "title": "Data Import",
+      "desc": "Historical business data, free to import"
+    },
+    "freely": {
+      "title": "Open Source",
+      "desc": "Get the latest source code at any time"
+    }
+  },
+  "buylicense": {
+    "title": "Get started",
+    "desc": "REBUILD is an open source product that uses the GPL 3.0 license agreement and any modifications/distributions you must follow. For commercial use, please purchase a REBUILD commercial license."
+  },
+  "license": {
+    "currency": "$",
+    "starting": "",
+    "commercial": "Commercial License",
+    "1developers": "1 Developers",
+    "ndevelopers": "8 Developers",
+    "xdevelopers": "Unlimited Developer",
+    "versionSupport": "Major Support",
+    "githubSupport": "GitHub Support",
+    "onlineSupport": "Online Supoort",
+    "onlineTraining": "Online Training (Extra charge)",
+    "roomTraining": "Room Training (Extra charge)",
+    "noDistribution": "No Distribution",
+    "buynow": "Buy Now",
+    "moreSupport": "We also offer OEM/SaaS licenses. Please ",
+    "forDetail": " for details.",
+    "personal": {
+      "title": "Personal",
+      "price": "199"
+    },
+    "team": {
+      "title": "Team",
+      "price": "1999"
+    },
+    "company": {
+      "title": "Organization",
+      "price": "29999"
+    }
+  },
+  "download": {
+    "byGithub": "Go to GitHub"
   }
 }
