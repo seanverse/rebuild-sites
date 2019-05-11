@@ -97,7 +97,7 @@
     "forDetail": "",
     "personal": {
       "title": "个人授权",
-      "price": "399"
+      "price": "299"
     },
     "team": {
       "title": "团队授权",
@@ -105,7 +105,7 @@
     },
     "company": {
       "title": "企业授权",
-      "price": "49999"
+      "price": "39999"
     }
   },
   "download": {
