@@ -111,7 +111,7 @@ hgroup {
 
 html,
 body {
-  font-family: 'pingfang SC', 'helvetica neue', arial, 'hiragino sans gb', 'microsoft yahei ui', 'microsoft yahei', simsun, sans-serif;
+  font-family: "PingFang SC", -apple-system, Roboto, "Microsoft YaHei";
   font-weight: 400;
   background-color: #fff;
   font-size: 16px;
@@ -1007,7 +1007,7 @@ welcome
 
 .welcome-area .header-text p {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 17px;
   color: #EAF3FF;
   line-height: 28px;
   margin-bottom: 40px;
