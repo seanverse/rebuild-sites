@@ -3,12 +3,13 @@ var path = require('path')
 var createError = require('http-errors')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
-var i18next = require('i18next')
-var i18nextMiddleware = require('i18next-express-middleware')
-var i18nextBackend = require('i18next-node-fs-backend')
+// var i18next = require('i18next')
+// var i18nextMiddleware = require('i18next-express-middleware')
+// var i18nextBackend = require('i18next-node-fs-backend')
 
 var indexRouter = require('./routes/index')
 var docsRouter = require('./routes/docs')
+const apisRouter = require('./routes/apis')
 
 var app = express()
 
@@ -43,6 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
 app.use('/docs2', docsRouter)
+app.use('/api', apisRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
