@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  //- Top banner
+  //- TOP BANNER
   div#welcome.welcome-area
     div.right-bg
       img.img-fluid.float-right(src="/img/photos/header-2.jpg")
@@ -9,28 +9,38 @@ block content
       div.container
         div.row
           div.offset-lg-2.col-lg-8.col-md-12.col-sm-12
-            h1 #{t('home.slogan')}
-            p #{t('home.introduction')}
+            h1 高度可定制化的业务管理系统
+            p REBUILD (RB) 为你提供业务数据管理与分析、权限与流程、数据审计、业务规则控制、消息通知等基础平台，可依据企业的不同需求，轻松灵活的设计出更加适合的业务系统。
             div.buttons
-              a.btn-white-line(href="https://nightly.getrebuild.com/") #{t('nav.freeTry')}
+              a.btn-white-line(href="https://nightly.getrebuild.com/") 立即体验
               a.btn-primary-line(href="https://github.com/getrebuild/rebuild/") <i class="fa fa-github"></i> GitHub
 
-  //- Very good
+  //- VERY GOOD
   section#introductions.section.home-feature
     div.container
       div.row
         div.col-lg-12
           div.row
-            - var home_feats = [['github', t('home.opensource.title'),  t('home.opensource.desc')], ['thumbs-o-up', t('home.selfdesign.title'), t('home.selfdesign.desc')], ['trophy', t('home.vpteam.title'), t('home.vpteam.desc')]]
-              each item in home_feats
-                div.col-lg-4.col-md-6.col-sm-6.col-12
-                  a.features-small-item
-                    div.icon
-                      i(class='fa fa-' + item[0])
-                    h5.features-title #{item[1]}
-                    p #{item[2]}
+            div.col-lg-4.col-md-6.col-sm-6.col-12
+              a.features-small-item
+                div.icon
+                  i.fa.fa-github
+                h5.features-title 免费开源
+                p RB 的源代码是 100% 完全开放的，你可在 GPL-3.0 许可协议内自由修改使用
+            div.col-lg-4.col-md-6.col-sm-6.col-12
+              a.features-small-item
+                div.icon
+                  i.fa.fa-thumbs-o-up
+                h5.features-title 自由设计
+                p 提供基础平台是 RB 的初衷，你可快速根据自身业务需求轻松设计出专属系统
+            div.col-lg-4.col-md-6.col-sm-6.col-12
+              a.features-small-item
+                div.icon
+                  i.fa.fa-trophy
+                h5.features-title 资深团队
+                p 我们拥有超过 10 年的企业产品研发与实施经验，深知企业所想所需
 
-  //- Your needed
+  //- YOU NEED IT
   section.section.padding-top-70.padding-bottom-0
     div.container
       div.row
@@ -39,10 +49,10 @@ block content
         div.col-lg-1
         div.col-lg-6.col-md-12.col-sm-12.align-self-center.mobile-top-fix
           div.left-heading
-            h3.section-title #{t('home.yourneed.title')}
+            h3.section-title 你需要什么
           div.left-text
-            p #{t('home.yourneed.desc')}
-            p #{t('home.yourneed.desc2')}
+            p 在产品选型时，经常会被市面上为数众多的候选品带入困境，究竟应该如何选择？
+            p 除了能夠满足日常业务需求，系统的可扩展性、灵活性、稳定性及性能也是十分重要的考察指标。RB 通过强大的自定义功能实现“自进化”来满足企业不断增长的业务需求。领先于行业的系统测试覆指标可保障系统稳定及性能。
       div.row
         div.col-lg-12
           div.hr
@@ -51,101 +61,124 @@ block content
       div.row
         div.col-lg-6.col-md-12.col-sm-12.align-self-center.mobile-bottom-fix
           div.left-heading
-            h3.section-title #{t('home.letimplemented.title')}
+            h3.section-title 让信息化真正落地
           div.left-text
-            p #{t('home.letimplemented.desc')}
-            p #{t('home.letimplemented.desc2')}
+            p 很多时候，信息化并不能很好的在企业内部落地，除了企业自身的决心与执行力，实施过程和产品易用性也至关重要。
+            p RB 团队拥有超过 10 年的行业经验，能够打造出更加好用、易用，并更加符合企业流程的产品，让员工爱用、愿意用，使信息化真正落地。
         div.col-lg-1
         div.col-lg-5.col-md-12.col-sm-12.align-self-center.mobile-bottom-fix-big
           img.rounded.img-fluid.d-block.mx-auto(src="/img/blue-1.png")
 
-  //- Feature
+  //- FEATURE
   section#features.parallax(data-image-src="/img/photos/parallax.jpg")
     div.parallax-content
       div.container
         div.row
-          div.offset-lg-3.col-lg-6
+          div.offset-lg-2.col-lg-8
             div.info
-              h2 #{t('feature.title')}
-              p #{t('feature.subtitle')}
+              h2 功能特性
+              p RB 拥有众多强大的特性，满足企业日常经营所需。同时保持不断的更新迭代，推出更多新特性，并持续优化现有特性。
         div.row
-          - var major_feats = [['cubes', t('feature.entity.title'), t('feature.entity.desc')], ['bolt', t('feature.permission.title'), t('feature.permission.desc')], ['check', t('feature.auditing.title'), t('feature.auditing.desc')], ['pie-chart', t('feature.analytics.title'), t('feature.analytics.desc')], ['cloud-upload', t('feature.migration.title'), t('feature.migration.desc')], ['code', t('feature.freely.title'), t('feature.freely.desc')]]
-            each item in major_feats
-              div.col-lg-2.col-md-3.col-sm-6.col-6
-                a.mini-box
-                  i(class='fa fa-' + item[0])
-                  strong #{item[1]}
-                  span #{item[2]}
+          div.col-lg-2.col-md-3.col-sm-6.col-6
+            a.mini-box
+              i.fa.fa-cubes
+              strong 业务实体
+              span 自由搭建，快速适应需求变化
+          div.col-lg-2.col-md-3.col-sm-6.col-6
+            a.mini-box
+              i.fa.fa-bolt
+              strong 权限管理
+              span 灵活控制，分级权限有条不紊
+          div.col-lg-2.col-md-3.col-sm-6.col-6
+            a.mini-box
+              i.fa.fa-check
+              strong 数据审计
+              span 跟踪数据历史，不惧任何数据纰漏
+          div.col-lg-2.col-md-3.col-sm-6.col-6
+            a.mini-box
+              i.fa.fa-usb
+              strong 审批流程
+              span 支持多分支流程控制
+          div.col-lg-2.col-md-3.col-sm-6.col-6
+            a.mini-box
+              i.fa.fa-cogs
+              strong 业务规则
+              span 自由设计，轻松适配企业流程
+          div.col-lg-2.col-md-3.col-sm-6.col-6
+            a.mini-box
+              i.fa.fa-code
+              strong 开放接口
+              span 可与外部系统轻松对接
 
-  //- Pricing
+  //- PRICING
   section#pricing-plans.section.colored
     div.container
       div.row
         div.col-lg-12
           div.center-heading
-            h2.section-title #{t('buylicense.title')}
-        div.offset-lg-3.col-lg-6
+            h2.section-title 开始使用
+        div.offset-lg-2.col-lg-8
           div.center-text
-            p #{t('buylicense.desc')}
+            p RB 是一款开源产品，使用 GPL3.0 及商业许可双重授权。对于非盈利目的的使用，仅需遵循 GPL3.0 协议。若出于商业目的使用请购买 RB 商业授权。
       div.row
         div.col-lg-4.col-md-6.col-sm-12
           div.pricing-item
             div.pricing-header
-              h3.pricing-title #{t('license.personal.title')}
+              h3.pricing-title 免费版
             div.pricing-body
               div.price-wrapper
-                span.currency #{t('license.currency')}
-                span.price #{t('license.personal.price')}
+                span.currency ¥
+                span.price 0
                 span.period
               ul.list
-                li.active #{t('license.commercial')}
-                li.active #{t('license.1developers')}
-                li.active #{t('license.versionSupport')}
-                li.active #{t('license.githubSupport')}
+                li.active GPL3.0
+                li.active 非盈利用途
+                li.active 版本更新 (Major)
+                li.active GitHub 支持
                 li - 
-                li.active #{t('license.noDistribution')}
+                li -
             div.pricing-footer
-              a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=BuyLicense") #{t('license.buynow')}
+              a.btn-primary-line(href="https://github.com/getrebuild/rebuild/") 立即使用
         div.col-lg-4.col-md-6.col-sm-12
           div.pricing-item
             div.pricing-header
-              h3.pricing-title #{t('license.team.title')}
+              h3.pricing-title 商业版
             div.pricing-body
               div.price-wrapper
-                span.currency #{t('license.currency')}
-                span.price #{t('license.team.price')}
-                span.period #{t('license.starting')}
+                span.currency ¥
+                span.price 9999
+                span.period 起
               ul.list
-                li.active #{t('license.commercial')}
-                li.active #{t('license.ndevelopers')}
-                li.active #{t('license.versionSupport')}
-                li.active #{t('license.githubSupport')}
-                li.active #{t('license.onlineTraining')}
-                li.active #{t('license.noDistribution')}
+                li.active 商业授权
+                li.active 限企业内部使用
+                li.active 版本更新 (Major)
+                li.active GitHub 支持
+                li.active 提供线上培训 (额外收费)
+                li.active 不可二次分发
             div.pricing-footer
-              a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=BuyLicense") #{t('license.buynow')}
+              a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=BuyLicense") 立即购买
         div.col-lg-4.col-md-6.col-sm-12
           div.pricing-item
             div.pricing-header
-              h3.pricing-title #{t('license.company.title')}
+              h3.pricing-title OEM 版
             div.pricing-body
               div.price-wrapper
-                span.currency #{t('license.currency')}
-                span.price #{t('license.company.price')}
-                span.period #{t('license.starting')}
+                span.currency ¥
+                span.price 59999
+                span.period 起
               ul.list
-                li.active #{t('license.commercial')}
-                li.active #{t('license.xdevelopers')}
-                li.active #{t('license.versionSupport')}
-                li.active #{t('license.onlineSupport')}
-                li.active #{t('license.roomTraining')}
-                li.active #{t('license.noDistribution')}
+                li.active 商业授权
+                li.active 不限制用途
+                li.active 版本更新 (Major)
+                li.active 专业在线支持
+                li.active 提供上门培训 (额外收费)
+                li.active 可二次分发
             div.pricing-footer
-              a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=BuyLicense") #{t('license.buynow')}
+              a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=BuyLicense") 立即购买
       div.row
         div.offset-lg-2.col-lg-8
           div.center-text.margin-bottom-0
             div(style="margin:20px 0")
               span.oem-icon
                 i.fa.fa-building
-            p.margin-bottom-0 #{t('license.moreSupport')} <a href="mailto:getrebuild@sina.com?subject=BuyOEM">#{t('contactUs')}</a> #{t('license.forDetail')}
+            p.margin-bottom-0 对于没有开发能力的企业客户，我们也接受定制服务，详情请 <a href="mailto:getrebuild@sina.com?subject=BuyDevelop">与我们联系</a>

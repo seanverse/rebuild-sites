@@ -3,10 +3,7 @@ var router = express.Router()
 
 router.get('/', function (req, res) {
   res.render('index', {
-    pretty: process.env.NODE_ENV === 'development',
-    title: req.t('home.title'),
-    keywords: req.t('home.keywords'),
-    description: req.t('home.description')
+    pretty: process.env.NODE_ENV === 'development'
   })
 })
 

@@ -111,7 +111,7 @@ hgroup {
 
 html,
 body {
-  font-family: "PingFang SC", -apple-system, Roboto, "Microsoft YaHei";
+  font-family: Roboto, "PingFang SC", -apple-system, "Hiragino Sans GB", "Microsoft YaHei";
   font-weight: 400;
   background-color: #fff;
   font-size: 16px;
@@ -998,7 +998,7 @@ welcome
 }
 
 .welcome-area .header-text h1 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 40px;
   line-height: 54px;
   margin-bottom: 30px;
@@ -2304,8 +2304,8 @@ footer .footer-nav li a:hover span {
 
 footer .footer-nav li a i {
   float: left;
-  height: 32px;
-  line-height: 32px;
+  height: 30px;
+  line-height: 30px;
   margin-right: 12px;
   font-size: 14px;
   color: #fff;

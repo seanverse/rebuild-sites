@@ -24,21 +24,22 @@ app.use(express.urlencoded({
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-i18next.use(i18nextBackend)
-  .use(i18nextMiddleware.LanguageDetector)
-  .init({
-    backend: {
-      loadPath: __dirname + '/locales/{{lng}}.json',
-      addPath: __dirname + '/locales/{{lng}}.missing.json'
-    },
-    whitelist: ['en', 'zh-CN'],
-    fallbackLng: 'zh-CN',
-    saveMissing: true,
-    detection: {
-      caches: ['cookie']
-    }
-  })
-app.use(i18nextMiddleware.handle(i18next))
+// i18n
+// i18next.use(i18nextBackend)
+//   .use(i18nextMiddleware.LanguageDetector)
+//   .init({
+//     backend: {
+//       loadPath: __dirname + '/locales/{{lng}}.json',
+//       addPath: __dirname + '/locales/{{lng}}.missing.json'
+//     },
+//     whitelist: ['en', 'zh-CN'],
+//     fallbackLng: 'zh-CN',
+//     saveMissing: true,
+//     detection: {
+//       caches: ['cookie']
+//     }
+//   })
+// app.use(i18nextMiddleware.handle(i18next))
 
 app.use('/', indexRouter)
 app.use('/docs2', docsRouter)
