@@ -43,7 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 // app.use(i18nextMiddleware.handle(i18next))
 
 app.use('/', indexRouter)
-app.use('/docs2', docsRouter)
+app.use('/docs', docsRouter)
 app.use('/api', apisRouter)
 
 // catch 404 and forward to error handler
