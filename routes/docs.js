@@ -24,10 +24,14 @@ router.get('/*', function (req, res) {
     }
 
     let result = md.render(content)
-    res.type('html')
+    console.log(result)
+    res.set('Content-Type', 'text/html')
     res.render('docs', {
       nav: NAV_HTML,
       content: result
+    }, (err, html) => {
+
+      res.send(html)
     })
   })
 })
