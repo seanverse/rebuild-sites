@@ -39,6 +39,7 @@ router.get('/pupp/pdf', async function (req, res) {
   }
 
   const browser = await pupp.launch({
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
     headless: true,
     slowMo: 0
   })
@@ -74,6 +75,7 @@ router.get('/pupp/screenshot', async function (req, res) {
   if (!isNaN(wh[1]) && ~~wh[1] > 0) viewport.height = ~~wh[1]
 
   const browser = await pupp.launch({
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
     headless: true,
     slowMo: 0
   })
