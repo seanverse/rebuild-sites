@@ -44,10 +44,12 @@ body {
 
 .book-summary>ul li a:hover {
   color: #008cff;
+  color: #2890C8;
 }
 
 .book-summary>ul li.active>a {
   color: #008cff;
+  color: #2890C8;
   background: 0 0;
   text-decoration: none
 }

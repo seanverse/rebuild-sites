@@ -15,7 +15,7 @@ RB 提供了业务实体构建、权限管理、流程管理、数据审计、�
 
 ### 开源协议
 
-RB 使用 [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html) 开源许可协议，请遵守许可协议之相关约定。
+RB 使用 [GPL3.0](https://www.gnu.org/licenses/gpl-3.0.html) 开源许可协议，请遵守许可协议之相关约定。
 
 ### 免责声明
 
