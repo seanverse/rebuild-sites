@@ -3,9 +3,9 @@ html
   head
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    meta(name="keywords", content= keywords || "REBUILD,RB,GETREBUILD,CRM,OA,ERP,MIS,CRM系统,企业管理,业务系统,办公,企业中台")
+    meta(name="keywords", content= keywords || "REBUILD,RB,GETREBUILD,CRM,OA,ERP,MIS,CRM系统,企业管理,业务系统,办公,企业中台,开源CRM")
     meta(name="description", content= description || "免费开源，高度可定制化的业务管理系统")
-    title= title || "REBUILD"
+    title= title || "REBUILD 高度可定制化的业务管理系统"
     link(rel="icon", type="image/png", href="/img/favicon.png")
     link(rel="stylesheet", href="//cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css")
     link(rel="stylesheet", href="//cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css")
@@ -33,13 +33,13 @@ html
                   a(href="/download") 下载
                 li
                   a(href="/docs/") 文档
-                li.submenu
+                li.submenu.hide
                   a(href="javascript:;") 更多
                   ul
                     li
                       a(href="https://github.com/getrebuild/rebuild/") GitHub
                 li
-                  a.btn-nav(href="https://nightly.getrebuild.com/") 免费试用
+                  a.btn-nav(href="https://nightly.getrebuild.com/") 免费体验
               a.menu-trigger
                 span 菜单
 
@@ -64,6 +64,9 @@ html
                 a(href="/docs/")
                   i.fa.fa-angle-right
                   span 帮助文档
+                a(href="https://github.com/getrebuild/")
+                  i.fa.fa-angle-right
+                  span GitHub
           div.col-lg-2.col-md-4.col-sm-6.col-6
             h5 支持
             ul.footer-nav

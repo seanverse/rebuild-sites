@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const fs = require('fs')
 const md = require('markdown-it')()
+const createError = require('http-errors')
 
 let NAV_HTML
 function __init__() {
@@ -21,7 +22,8 @@ router.get('/*', function (req, res) {
 
   fs.readFile(path, 'utf-8', (err, content) => {
     if (err) {
-      res.sendStatus(404)
+      errorHandler(req, res)
+      // res.sendStatus(404)
       return
     }
 
@@ -34,5 +36,14 @@ router.get('/*', function (req, res) {
     })
   })
 })
+
+// error handler
+const errorHandler = function (req, res) {
+  let err = createError(404)
+  res.locals.message = err.message
+  res.locals.error = req.app.get('env') === 'development' ? err : {}
+  res.status(err.status || 500)
+  res.render('error')
+}
 
 module.exports = router
