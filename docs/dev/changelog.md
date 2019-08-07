@@ -5,9 +5,20 @@
 
 ## V1
 
+### [1.4.0 (2019.08.03)](https://github.com/getrebuild/rebuild/pulls?utf8=✓&q=milestone%3Av1.4)
+
+- [新增] 审批流程
+- [新增] 数字型字段支持允许负数选项
+- [新增] 自动头像/头像上传裁剪
+- [新增] 字段 PORTAL 属性
+- [新增] OpenAPI 基础框架
+- [优化] 消息通知分类
+- [优化] 视图组件化
+- [优化] 20+ Bug Fixed 和细节优化
+
 ### [1.3.0 (2019.06.12)](https://github.com/getrebuild/rebuild/pulls?utf8=✓&q=milestone%3Av1.3)
 
-- [新增] 业务规则触发器 (R2Robot)
+- [新增] 业务规则触发器
 - [新增] 表单自动回填 (针对引用字段)
 - [新增] 表单填写提示
 - [新增] 自助注册功能开放

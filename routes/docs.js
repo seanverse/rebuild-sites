@@ -26,8 +26,8 @@ router.get('/*', function (req, res) {
     }
 
     let result = md.render(content)
-    res.set('Content-Type', 'text/html')
     res.render('docs', {
+      pretty: process.env.NODE_ENV === 'development',
       nav_content: NAV_HTML,
       doc_content: result,
       html: true
