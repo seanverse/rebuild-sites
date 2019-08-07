@@ -1490,7 +1490,6 @@ parallax & home seperator
 }
 
 .parallax .parallax-content .mini-box i {
-  display: block;
   font-size: 20px;
   background: -webkit-linear-gradient(#2973D7, #26ACB9);
   -webkit-background-clip: text;
@@ -1793,7 +1792,6 @@ pricing
   left: 0px;
   right: 0px;
   margin: auto;
-  text-transform: uppercase;
 }
 
 .pricing-item .pricing-body {
@@ -1840,13 +1838,11 @@ pricing
   margin-bottom: 12px;
   font-weight: 400;
   font-size: 14px;
-  color: #CCDCEA;
-  text-decoration: line-through;
+  color: #ccc;
 }
 
 .pricing-item .pricing-body .list li.active {
   color: #3B566E;
-  text-decoration: none;
 }
 
 .pricing-item .pricing-footer {
