@@ -1,17 +1,17 @@
-var express = require('express')
-var path = require('path')
-var createError = require('http-errors')
-var cookieParser = require('cookie-parser')
-var logger = require('morgan')
-// var i18next = require('i18next')
-// var i18nextMiddleware = require('i18next-express-middleware')
-// var i18nextBackend = require('i18next-node-fs-backend')
+const express = require('express')
+const path = require('path')
+const createError = require('http-errors')
+const cookieParser = require('cookie-parser')
+const logger = require('morgan')
+// const i18next = require('i18next')
+// const i18nextMiddleware = require('i18next-express-middleware')
+// const i18nextBackend = require('i18next-node-fs-backend')
 
-var indexRouter = require('./routes/index')
-var docsRouter = require('./routes/docs')
+const indexRouter = require('./routes/index')
+const docsRouter = require('./routes/docs')
 const apisRouter = require('./routes/apis')
 
-var app = express()
+const app = express()
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
@@ -52,10 +52,8 @@ app.use(function (req, res, next) {
 })
 // error handler
 app.use(function (err, req, res) {
-  // set locals, only providing error in development
   res.locals.message = err.message
   res.locals.error = req.app.get('env') === 'development' ? err : {}
-  // render the error page
   res.status(err.status || 500)
   res.render('error')
 })

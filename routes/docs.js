@@ -7,6 +7,8 @@ let NAV_HTML
 function __init__() {
   fs.readFile(`${__dirname}/../docs/SUMMARY.md`, 'utf-8', (err, content) => {
     NAV_HTML = md.render(content)
+    NAV_HTML = NAV_HTML.replace(/index.md/g, '')
+    NAV_HTML = NAV_HTML.replace(/.md/g, '')
   })
 }
 __init__()
@@ -24,14 +26,11 @@ router.get('/*', function (req, res) {
     }
 
     let result = md.render(content)
-    console.log(result)
     res.set('Content-Type', 'text/html')
     res.render('docs', {
-      nav: NAV_HTML,
-      content: result
-    }, (err, html) => {
-
-      res.send(html)
+      nav_content: NAV_HTML,
+      doc_content: result,
+      html: true
     })
   })
 })

@@ -5,7 +5,7 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1")
     meta(name="keywords", content= keywords || "REBUILD,RB,GETREBUILD,CRM,OA,ERP,MIS,CRM系统,企业管理,业务系统,办公,企业中台")
     meta(name="description", content= description || "免费开源，高度可定制化的业务管理系统")
-    title= title || "文档 REBUILD"
+    title= title || "文档中心 · REBUILD"
     link(rel="icon", type="image/png", href="/img/favicon.png")
     link(rel="stylesheet", href="//cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css")
     link(rel="stylesheet", href="//cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css")
@@ -22,26 +22,16 @@ html
                 img(src="/img/logo.png", alt="Logo")
               ul.nav
                 li
-                  a(href="/") 首页
-                li
-                  a.active(href="/download") 下载
-                li
-                  a(href="/docs/") 文档
-                li.submenu
-                  a(href="javascript:;") 更多
-                  ul
-                    li
-                      a(href="https://github.com/getrebuild/rebuild/") GitHub
-                li
-                  a.btn-nav(href="https://nightly.getrebuild.com/") 免费试用
-              a.menu-trigger
-                span 菜单
+                  a(href="/") <i class="fa fa-home"></i> 返回首页
 
-    //- content
-    div.container.docs
-      div.row
-        div.col-3 #{nav}
-        div.col-9 #{content}
+    //- doc content
+    div.page
+      div.container.docs
+        div.row
+          div.col-2(style="padding-right:0")
+            div.book-summary !{nav_content}
+          div.col-10
+            div.markdown-section !{doc_content}
 
     //- footer
     footer(style="padding-top:0")

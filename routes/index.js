@@ -10,14 +10,14 @@ router.get('/', function (req, res) {
 router.get('/download', function (req, res) {
   res.render('download', {
     pretty: process.env.NODE_ENV === 'development',
-    title: '下载 REBUILD'
+    title: '产品下载 · REBUILD'
   })
 })
 
 router.get('/about', function (req, res) {
   res.render('about', {
     pretty: process.env.NODE_ENV === 'development',
-    title: '关于我们'
+    title: '关于我们 · REBUILD'
   })
 })
 
