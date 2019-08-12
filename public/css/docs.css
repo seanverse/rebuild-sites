@@ -17,44 +17,44 @@ footer .copyright {
   font-size: 0.9rem;
 }
 
-.markdown-section > h1 > a {
+.markdown-section>h1>a {
   font-size: 1rem;
   color: #999;
   float: right;
-  margin-top: 9px;
+  margin-top: 4px;
   display: none;
 }
 
-.markdown-section > h1:hover > a {
+.markdown-section>h1:hover>a {
   display: inline-block;
 }
 
 .book-summary {
   color: #364149;
   padding: 0;
-  padding-left: 10px;
   position: sticky;
   top: 120px;
 }
 
-.book-summary > h1 {
+.book-summary>h1 {
   display: none;
 }
 
-.book-summary > ul {
+.book-summary>ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.book-summary > ul li {
+.book-summary>ul li {
   list-style: none;
 }
 
-.book-summary > ul li a,
-.book-summary > ul li span {
+.book-summary>ul li a,
+.book-summary>ul li span {
   display: block;
-  padding: 6px 20px;
+  padding: 10px 20px;
+  padding-left: 30px;
   border-bottom: none;
   color: #364149;
   background: 0 0;
@@ -62,22 +62,27 @@ footer .copyright {
   overflow: hidden;
   white-space: nowrap;
   position: relative;
+  line-height: 1;
 }
 
-.book-summary > ul li a:hover {
+.book-summary>ul li a:hover {
   color: #008cff;
   color: #2890c8;
 }
 
-.book-summary > ul li.active > a {
+.book-summary>ul li.active>a {
   color: #008cff;
   color: #2890c8;
   background: 0 0;
   text-decoration: none;
+  background-color: #2890c8;
+  color: #fff;
+  border-radius: 2px;
+  opacity: 1;
 }
 
-.book-summary > ul li ul {
-  padding-left: 20px;
+.book-summary>ul li ul li a {
+  padding-left: 48px;
 }
 
 .markdown-section {
@@ -103,11 +108,11 @@ footer .copyright {
   font-size: inherit;
 }
 
-.markdown-section > :first-child {
+.markdown-section> :first-child {
   margin-top: 0 !important;
 }
 
-.markdown-section > :last-child {
+.markdown-section> :last-child {
   margin-bottom: 0 !important;
 }
 
@@ -253,7 +258,7 @@ footer .copyright {
   background: #f7f7f7;
 }
 
-.markdown-section pre > code {
+.markdown-section pre>code {
   display: inline;
   max-width: initial;
   padding: 0;
@@ -265,8 +270,8 @@ footer .copyright {
   background: 0 0;
 }
 
-.markdown-section pre > code:after,
-.markdown-section pre > code:before {
+.markdown-section pre>code:after,
+.markdown-section pre>code:before {
   content: normal;
 }
 

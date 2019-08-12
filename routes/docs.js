@@ -4,6 +4,9 @@ const fs = require('fs')
 const md = require('markdown-it')()
 const createError = require('http-errors')
 
+const Cache = require('cache')
+const docsCache = new Cache(1000 * 60 * 5)  // 5min
+
 let NAV_HTML
 function __init__() {
   fs.readFile(`${__dirname}/../docs/SUMMARY.md`, 'utf-8', (err, content) => {
@@ -20,20 +23,29 @@ router.get('/*', function (req, res) {
   else path += '.md'
   path = `${__dirname}/../docs/${path}`
 
+  let options = {
+    pretty: process.env.NODE_ENV === 'development',
+    nav_content: NAV_HTML,
+    html: true
+  }
+
+  let c = docsCache.get(path)
+  if (c) {
+    options.doc_content = c
+    res.render('docs', options)
+    return
+  }
+
   fs.readFile(path, 'utf-8', (err, content) => {
     if (err) {
       errorHandler(req, res)
-      // res.sendStatus(404)
       return
     }
 
     let result = md.render(content)
-    res.render('docs', {
-      pretty: process.env.NODE_ENV === 'development',
-      nav_content: NAV_HTML,
-      doc_content: result,
-      html: true
-    })
+    options.doc_content = result
+    docsCache.put(path, result)
+    res.render('docs', options)
   })
 })
 

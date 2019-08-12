@@ -9,20 +9,6 @@ const simpleCache = new Cache(5 * 60 * 1000)  // 5min
 
 const URL_REGEX = /^(http|https)\:\/\/[a-z0-9\-\.]+(:[0-9]*)?\/?([a-z0-9\-\._\?\,\'\/\\\+&amp;%\$#\=~!:])*$/i
 
-// 发送文件
-function sendFile(res, attname, file) {
-  let options = {}
-  if (attname) {
-    options = {
-      headers: {
-        'Content-Type': 'application/octet-stream;charset=UTF-8',
-        'Content-Disposition': 'attachment; filename=' + attname
-      }
-    }
-  }
-  res.sendFile(file, options)
-}
-
 // 统一认证
 router.get('*', (req, res, next) => {
   let allowed = (req.headers.referer || '').includes('getrebuild.com') || req.query.k === 'IjkMHgq94T7s7WkP'
@@ -40,6 +26,20 @@ router.get('*', (req, res, next) => {
 
   next()
 })
+
+// 发送文件
+function sendFile(res, attname, file) {
+  let options = {}
+  if (attname) {
+    options = {
+      headers: {
+        'Content-Type': 'application/octet-stream;charset=UTF-8',
+        'Content-Disposition': 'attachment; filename=' + attname
+      }
+    }
+  }
+  res.sendFile(file, options)
+}
 
 // -- APIs --
 
@@ -103,12 +103,10 @@ router.get('/pupp/screenshot', async function (req, res) {
 })
 
 // BING 背景图
-
 router.get('/misc/bgimg', async function (req, res) {
   res.header('Content-Type', 'application/json; charset=utf-8')
   let c = simpleCache.get('bgimg')
   if (c) {
-    console.log('Use cache : ' + JSON.stringify(c))
     res.send(c)
     return
   }
