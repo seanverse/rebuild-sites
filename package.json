@@ -1,12 +1,12 @@
 {
-  "name": "rebuild-website",
-  "description": "rebuild offical website and docs-hub",
-  "version": "2.0.0",
+  "name": "rebuild-sites",
+  "description": "rebuild official site and document hub",
+  "version": "0.3.0",
   "author": "RB <getrebuild@sina.com> (https://github.com/getrebuild)",
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/getrebuild/website.git"
+    "url": "git://github.com/getrebuild/rebuild-sites.git"
   },
   "dependencies": {
     "cache": "^2.1.0",

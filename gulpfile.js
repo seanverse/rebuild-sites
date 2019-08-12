@@ -1,7 +1,7 @@
-var gulp = require('gulp')
-var browserSync = require('browser-sync')
-var reload = browserSync.reload
-var nodemon = require('gulp-nodemon')
+const gulp = require('gulp')
+const browserSync = require('browser-sync')
+const reload = browserSync.reload
+const nodemon = require('gulp-nodemon')
 
 gulp.task('node', function () {
   nodemon({
@@ -13,7 +13,7 @@ gulp.task('node', function () {
 })
 
 gulp.task('server', ['node'], function () {
-  var files = [
+  const files = [
     'routes/**/*.js',
     'views/**/*.pug',
     'public/**/*.*'

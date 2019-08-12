@@ -3,9 +3,6 @@ const path = require('path')
 const createError = require('http-errors')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
-// const i18next = require('i18next')
-// const i18nextMiddleware = require('i18next-express-middleware')
-// const i18nextBackend = require('i18next-node-fs-backend')
 
 const indexRouter = require('./routes/index')
 const docsRouter = require('./routes/docs')
@@ -24,23 +21,6 @@ app.use(express.urlencoded({
 }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
-
-// i18n
-// i18next.use(i18nextBackend)
-//   .use(i18nextMiddleware.LanguageDetector)
-//   .init({
-//     backend: {
-//       loadPath: __dirname + '/locales/{{lng}}.json',
-//       addPath: __dirname + '/locales/{{lng}}.missing.json'
-//     },
-//     whitelist: ['en', 'zh-CN'],
-//     fallbackLng: 'zh-CN',
-//     saveMissing: true,
-//     detection: {
-//       caches: ['cookie']
-//     }
-//   })
-// app.use(i18nextMiddleware.handle(i18next))
 
 app.use('/', indexRouter)
 app.use('/docs', docsRouter)

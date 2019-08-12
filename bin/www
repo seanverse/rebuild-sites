@@ -2,7 +2,7 @@
 /* eslint-disable no-console */
 
 var app = require('../app')
-var debug = require('debug')('rb-website:server')
+var debug = require('debug')('rebuild-sites:server')
 var http = require('http')
 
 var port = normalizePort(process.env.PORT || '3000')
