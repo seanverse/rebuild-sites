@@ -101,8 +101,9 @@ router.get('/pupp/screenshot', async function (req, res) {
 // BING 背景图
 router.get('/misc/bgimg', async function (req, res) {
   res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Headers', 'X-Requested-With');
   res.header('Access-Control-Allow-Methods', 'GET')
-  res.header('Content-Type', 'application/json;charset=utf-8')
+  res.header('Content-Type', 'application/json; charset=utf-8')
 
   request('https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN', { json: true }, (err, resp, body) => {
     if (!err && resp.statusCode == 200) {
