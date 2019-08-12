@@ -2,6 +2,7 @@ const pupp = require('puppeteer')
 const express = require('express')
 const router = express.Router()
 const os = require('os')
+const request = require('request')
 
 const URL_REGEX = /^(http|https)\:\/\/[a-z0-9\-\.]+(:[0-9]*)?\/?([a-z0-9\-\._\?\,\'\/\\\+&amp;%\$#\=~!:])*$/i
 
@@ -26,12 +27,20 @@ function sendFile(res, attname, file) {
   res.sendFile(file, options)
 }
 
-// 网页导出 PDF
-router.get('/pupp/pdf', async function (req, res) {
+// 统一认证
+router.get('*', (req, res, next) => {
   if (!checkAuth(req)) {
+    console.log('Bad auth from : ' + req.headers.referer)
     res.status(403).send({ error: 'Access forbidden' })
     return
   }
+  next()
+})
+
+// -- APIs --
+
+// 网页导出 PDF
+router.get('/pupp/pdf', async function (req, res) {
   const url = req.query.url
   if (!url || !URL_REGEX.test(url)) {
     res.status(400).send({ error: 'Invalid parameter [url]' })
@@ -59,10 +68,6 @@ router.get('/pupp/pdf', async function (req, res) {
 
 // 网页截图
 router.get('/pupp/screenshot', async function (req, res) {
-  if (!checkAuth(req)) {
-    res.status(403).send({ error: 'Access forbidden' })
-    return
-  }
   const url = req.query.url
   if (!url || !URL_REGEX.test(url)) {
     res.status(400).send({ error: 'Invalid parameter [url]' })
@@ -91,6 +96,23 @@ router.get('/pupp/screenshot', async function (req, res) {
   await browser.close()
 
   sendFile(res, req.query.attname, dest)
+})
+
+// BING 背景图
+router.get('/misc/bgimg', async function (req, res) {
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Methods', 'GET')
+  res.header('Content-Type', 'application/json;charset=utf-8')
+
+  request('https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN', { json: true }, (err, resp, body) => {
+    if (!err && resp.statusCode == 200) {
+      let result = body.images[0]
+      result = { url: `https://cn.bing.com${result.url}`, copyright: result.copyright, source: 'cn.bing.com' }
+      res.send(result)
+    } else {
+      res.status(500).send({ error: err || 'Unknow error' })
+    }
+  })
 })
 
 module.exports = router
