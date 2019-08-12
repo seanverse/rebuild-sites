@@ -1,5 +1,5 @@
 ## rebuild-site
-rebuild offical website and document hub.
+rebuild official site and document hub.
 
 ## Install & Run
 ```
