@@ -6,13 +6,6 @@ const request = require('request')
 
 const URL_REGEX = /^(http|https)\:\/\/[a-z0-9\-\.]+(:[0-9]*)?\/?([a-z0-9\-\._\?\,\'\/\\\+&amp;%\$#\=~!:])*$/i
 
-// 检查授权
-function checkAuth(req) {
-  if (process.env.NODE_ENV === 'development') return true
-  return (req.headers.referer || '').includes('getrebuild.com')
-    || req.query.k === 'IjkMHgq94T7s7WkP'
-}
-
 // 发送文件
 function sendFile(res, attname, file) {
   let options = {}
@@ -29,11 +22,19 @@ function sendFile(res, attname, file) {
 
 // 统一认证
 router.get('*', (req, res, next) => {
-  if (!checkAuth(req)) {
+  let allowed = (req.headers.referer || '').includes('getrebuild.com') || req.query.k === 'IjkMHgq94T7s7WkP'
+    || process.env.NODE_ENV === 'development'
+  if (!allowed) {
     console.log('Bad auth from : ' + req.headers.referer)
     res.status(403).send({ error: 'Access forbidden' })
     return
   }
+
+  // CROS
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Headers', 'X-Requested-With');
+  res.header('Access-Control-Allow-Methods', 'POST,GET,OPTIONS')
+
   next()
 })
 
@@ -100,15 +101,11 @@ router.get('/pupp/screenshot', async function (req, res) {
 
 // BING 背景图
 router.get('/misc/bgimg', async function (req, res) {
-  res.header('Access-Control-Allow-Origin', '*')
-  res.header('Access-Control-Allow-Headers', 'X-Requested-With');
-  res.header('Access-Control-Allow-Methods', 'GET')
-  res.header('Content-Type', 'application/json; charset=utf-8')
-
   request('https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN', { json: true }, (err, resp, body) => {
     if (!err && resp.statusCode == 200) {
       let result = body.images[0]
       result = { url: `https://cn.bing.com${result.url}`, copyright: result.copyright, source: 'cn.bing.com' }
+      res.header('Content-Type', 'application/json; charset=utf-8')
       res.send(result)
     } else {
       res.status(500).send({ error: err || 'Unknow error' })
