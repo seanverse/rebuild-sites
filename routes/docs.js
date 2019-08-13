@@ -8,14 +8,14 @@ const Cache = require('cache')
 const docsCache = new Cache(1000 * 60 * 5)  // 5min
 
 let NAV_HTML
-function __init__() {
+(() => {
   fs.readFile(`${__dirname}/../docs/SUMMARY.md`, 'utf-8', (err, content) => {
+    content = content.replace(/\(/g, '(/docs/')
+      .replace(/index.md/g, '')
+      .replace(/.md/g, '')
     NAV_HTML = md.render(content)
-    NAV_HTML = NAV_HTML.replace(/index.md/g, '')
-    NAV_HTML = NAV_HTML.replace(/.md/g, '')
   })
-}
-__init__()
+})()
 
 router.get('/*', function (req, res) {
   let path = req.path
@@ -30,6 +30,7 @@ router.get('/*', function (req, res) {
   }
 
   let c = docsCache.get(path)
+  if (process.env.NODE_ENV === 'development') c = null
   if (c) {
     options.doc_content = c
     res.render('docs', options)

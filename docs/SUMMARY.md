@@ -1,13 +1,19 @@
 # Summary
 
-* [介绍](/docs/index.md)
-* [用户手册](/docs/manual/index.md)
-    * [安装](/docs/manual/install.md)
-    * [系统配置](/docs/manual/general.md)
-    * [用户管理](/docs/manual/users.md)
-    * [权限角色](/docs/manual/privileges.md)
-    * [业务实体](/docs/manual/entityhub.md)
-    * [数据导入](/docs/manual/data-import.md)
-* [开发人员](/docs/dev/index.md)
-* [更新日志](/docs/dev/changelog.md)
+* [介绍](index.md)
+* 用户手册
+    * [基本操作](manual/basic.md)
+    * [分派与共享](manual/shares.md)
+    * [高级查询](manual/adv-filter.md)
+* 管理员手册
+    * [安装](admin/install.md)
+    * [系统配置](admin/general.md)
+    * [用户管理](admin/users.md)
+    * [权限角色](admin/privileges.md)
+    * [业务实体](admin/entityhub.md)
+    * [数据导入](admin/data-import.md)
+    * [触发器](admin/triggers.md)
+    * [审批流程](admin/approval.md)
+* [开发人员](dev/index.md)
+* [更新日志](dev/changelog.md)
 

@@ -17,6 +17,12 @@ footer .copyright {
   font-size: 0.9rem;
 }
 
+.container.docs .book-nav {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+}
+
 .markdown-section>h1>a {
   font-size: 1rem;
   color: #999;
@@ -48,13 +54,14 @@ footer .copyright {
 
 .book-summary>ul li {
   list-style: none;
+  color: #aaa;
+  padding-left: 20px;
 }
 
 .book-summary>ul li a,
 .book-summary>ul li span {
   display: block;
-  padding: 10px 20px;
-  padding-left: 30px;
+  padding: 10px 0;
   border-bottom: none;
   color: #364149;
   background: 0 0;
@@ -65,24 +72,20 @@ footer .copyright {
   line-height: 1;
 }
 
+.book-summary>ul li ul li {
+  padding-left: 16px;
+}
+
 .book-summary>ul li a:hover {
   color: #008cff;
   color: #2890c8;
 }
 
 .book-summary>ul li.active>a {
-  color: #008cff;
   color: #2890c8;
   background: 0 0;
   text-decoration: none;
-  background-color: #2890c8;
-  color: #fff;
-  border-radius: 2px;
   opacity: 1;
-}
-
-.book-summary>ul li ul li a {
-  padding-left: 48px;
 }
 
 .markdown-section {
