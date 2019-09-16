@@ -1,6 +1,6 @@
 html,
 body {
-  background: #f9faff;
+  background-color: #F5F7F9;
 }
 
 footer {
@@ -82,6 +82,10 @@ footer .copyright {
   padding-left: 16px;
 }
 
+.book-summary>ul li ul {
+  border-left: 0px solid rgb(230, 236, 241)
+}
+
 .book-summary>ul li a:hover {
   color: #008cff;
   color: #2890c8;
@@ -92,7 +96,7 @@ footer .copyright {
   background: 0 0;
   text-decoration: none;
   opacity: 1;
-  border-right: 3px solid #2890c8;
+  border-right: 3px solid #2890c8
 }
 
 .markdown-section {

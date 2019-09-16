@@ -168,7 +168,7 @@ body {
 }
 
 .section.colored {
-  background: #f9faff;
+  background: #F5F7F9;
 }
 
 .hr {
@@ -2483,7 +2483,7 @@ pages
   font-size: 16px;
   line-height: 28px;
   color: #6f8ba4;
-  background: #f9faff;
+  background: #F5F7F9;
 }
 
 .page .page-bottom p {
@@ -2892,7 +2892,7 @@ aside.default-aside .sidebar ul li.active a:hover {
 }
 
 aside.default-aside .sidebar ul li:nth-child(even) {
-  background: #f9faff;
+  background: #F5F7F9;
 }
 
 aside.default-aside .sidebar ul li:last-child a {
