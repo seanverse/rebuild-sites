@@ -4,7 +4,7 @@
 
 ## 系统环境准备
 
-RB 依赖以下软件环境，在开始前请确保已经准备好以下软件。
+RB 依赖以下软件环境，在开始安装前请确保已经准备好以下软件。
 
 - JDK/JRE 1.8+
 - MySQL 5.6/5.7
@@ -18,7 +18,7 @@ RB 依赖以下软件环境，在开始前请确保已经准备好以下软件�
 
 ## 下载 RB 安装包
 
-你可以到 [RB 官网](https://getrebuild.com/download) 下载最新版安装包，也可以至 RB 的 [GitHub 项目](https://github.com/getrebuild/rebuild/) 页下载。一般情况下每个版本我们会同时提供源码和二进制安装包，安装包通常以 `-release.zip` 结尾。
+你可以到 [RB 官网](https://getrebuild.com/download) 下载最新版安装包，也可以至 RB 的 [GitHub 项目](https://github.com/getrebuild/rebuild/) 页下载。一般情况下每个版本我们会同时提供源码和二进制安装包，安装包通常以 `release.zip` 结尾。
 
 
 
@@ -30,6 +30,6 @@ RB 依赖以下软件环境，在开始前请确保已经准备好以下软件�
 4. 进入解压目录下的 `bin/` 目录，并双击 `startup.bat` （Windows）或 `startup.sh` （Linux/MacOS）启动 REBUILD
 5. 启动后，打开浏览器并输入 `http://localhost:18080/` 访问
 
-> 如果启动失败，系统会定向到服务状态页面，并显示失败原因。如下图所示
+> 如果启动失败，系统会定向到服务状态页面，并显示原因。如下图所示
 
 ![ServerStatue](../images/F9AF4255-2777-4001-BE62-0B2A33913ED1.png)
