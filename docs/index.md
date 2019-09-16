@@ -27,6 +27,6 @@ RB 是一款开源产品，使用 [GPL3.0](https://raw.githubusercontent.com/get
 
 ## 帮助文档
 
-* [用户手册](manual/index)
+* [用户手册](manual/basic)
 * [开发人员](dev/index)
 
