@@ -10,6 +10,10 @@ html
     link(rel="stylesheet", href="//cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css")
     link(rel="stylesheet", href="//cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css")
     link(rel="stylesheet", href="/css/sites.css?v=20190813")
+    script(src="//cdn.staticfile.org/jquery/2.1.4/jquery.min.js")
+    script(src="//cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js")
+    script(src="//cdn.staticfile.org/parallax.js/1.5.0/parallax.min.js")
+    script(src="/js/sites.js?v=20190813")
   body
     //- Loading
     div#preloader.hide
@@ -64,9 +68,12 @@ html
                 a(href="/docs/")
                   i.fa.fa-angle-right
                   span 帮助文档
-                a(href="https://github.com/getrebuild/")
+                a(href="https://raw.githubusercontent.com/getrebuild/rebuild/master/LICENSE")
                   i.fa.fa-angle-right
-                  span GitHub
+                  span 开源许可协议
+                a(href="https://raw.githubusercontent.com/getrebuild/rebuild/master/COMMERCIAL")
+                  i.fa.fa-angle-right
+                  span 商用许可协议
           div.col-lg-2.col-md-4.col-sm-6.col-6
             h5 支持
             ul.footer-nav
@@ -74,10 +81,9 @@ html
                 a(href="https://github.com/getrebuild/rebuild/issues/new")
                   i.fa.fa-angle-right
                   span 问题反馈
-              li
-                a(href="https://github.com/getrebuild/rebuild/blob/master/LICENSE")
+                a(href="/authority")
                   i.fa.fa-angle-right
-                  span 许可协议
+                  span 授权查询
           div.col-lg-3.col-md-4.col-sm-12
             h5 联系我们
             div.address
@@ -96,8 +102,3 @@ html
                   a(href="?lng=en") EN
                 span 
                   a(href="?lng=zh-CN") 中文
-
-    script(src="//cdn.staticfile.org/jquery/2.1.4/jquery.min.js")
-    script(src="//cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js")
-    script(src="//cdn.staticfile.org/parallax.js/1.5.0/parallax.min.js")
-    script(src="/js/sites.js?v=20190813")

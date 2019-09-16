@@ -2545,6 +2545,8 @@ pages
   outline: none !important;
   cursor: pointer;
   position: relative;
+  font-size: 13px;
+  font-weight: normal;
 }
 
 .page .page-bottom .about .btn-line:hover {
@@ -2571,37 +2573,8 @@ pages
   z-index: 1;
 }
 
-.page .page-bottom .about .about-image .play {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  margin: auto;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  background: #fff;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-  z-index: 2;
-  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.13);
-  transition: all 0.2s ease-in-out;
-}
-
-.page .page-bottom .about .about-image .play:hover {
-  transform: scale(1.1);
-}
-
-.page .page-bottom .about .about-image .play i {
-  display: block;
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  font-size: 20px;
-  padding-left: 2px;
-  color: #2890c8;
-  text-align: center;
+.page .page-bottom .about p {
+  margin-bottom: 20px;
 }
 
 .page .page-bottom .features-small-item p {
@@ -3460,7 +3433,7 @@ img.logo {
 
 .oem-icon {
   background-color: #2890c8;
-  background-color: #333;
+  background-color: #555;
   color: #fff;
   border-radius: 50%;
   display: inline-block;
@@ -3483,4 +3456,55 @@ footer .copyright p.lng span {
 
 footer .address {
   padding-top: 3px;
+}
+
+#a-query .input-group {
+  max-width: 666px;
+  margin: 0 auto;
+}
+
+#a-query .input-group * {
+  font-size: 1rem;
+}
+
+#a-result .box {
+  max-width: 718px;
+  margin: 0 auto;
+  border: 6px solid #e0c06d;
+  border-radius: 4px;
+  min-height: 200px;
+  background: url(/img/auth_bg.jpg) repeat-y 0 0;
+  padding: 32px 64px;
+  user-select: none;
+  cursor: default;
+}
+
+#a-result .box .vlogo {
+  text-align: center;
+  border-bottom: 3px solid#e0c06d;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+#a-result .box .vlogo img {
+  width: 66px;
+}
+
+#a-result .box .vlogo h5 {
+  color: #e0c06d;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+#a-result .box .content th,
+#a-result .box .content td {
+  color: #666;
+  border-top: 0 none;
+}
+
+#a-result .box .content td {
+  width: 33.33%;
+  color: #888;
 }

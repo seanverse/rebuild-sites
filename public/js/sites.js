@@ -27,4 +27,16 @@
       }
     })
   }
+
 })(window.jQuery)
+
+// 获取 URL 参数
+var $urlp = function (p) {
+  var query = location.search.substring(1)
+  var vars = query.split('&')
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split('=')
+    if (pair[0] == p) { return pair[1] }
+  }
+  return false
+}

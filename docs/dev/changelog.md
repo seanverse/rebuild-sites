@@ -5,6 +5,17 @@
 
 ## V1
 
+### [1.5.0 (2019.09.15)](https://github.com/getrebuild/rebuild/pulls?utf8=✓&q=milestone%3Av1.5)
+
+- [新增] 记录修改历史/回收站
+- [新增] 图片/Office 文档在线预览
+- [新增] 视图打印/Excel 报表
+- [新增] 全局搜索
+- [新增] 自动分派与共享
+- [新增] 重复记录判断
+- [优化] 字段默认值全局生效
+- [优化] 30+ Bug Fixed 和细节优化
+
 ### [1.4.0 (2019.08.03)](https://github.com/getrebuild/rebuild/pulls?utf8=✓&q=milestone%3Av1.4)
 
 - [新增] 审批流程

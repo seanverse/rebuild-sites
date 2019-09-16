@@ -21,4 +21,11 @@ router.get('/about', function (req, res) {
   })
 })
 
+router.get('/authority', function (req, res) {
+  res.render('authority', {
+    pretty: process.env.NODE_ENV === 'development',
+    title: '授权查询 · REBUILD'
+  })
+})
+
 module.exports = router
