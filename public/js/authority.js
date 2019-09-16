@@ -5,5 +5,7 @@
     $('#a-query').addClass('hide')
     $('#a-result').removeClass('hide')
     $('#auth-sn').text(sn)
+    $('.box > .wt').text(new Date().toGMTString().replace('GMT', ''))
   }
+
 })(window.jQuery)

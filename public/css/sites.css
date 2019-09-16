@@ -3468,10 +3468,11 @@ footer .address {
 }
 
 #a-result .box {
-  max-width: 718px;
+  max-width: 668px;
   margin: 0 auto;
-  border: 6px solid #e0c06d;
-  border-radius: 4px;
+  border: 6px double #e0c06d;
+  outline: 3px solid #e0c06d;
+  border-radius: 0px;
   min-height: 200px;
   background: url(/img/auth_bg.jpg) repeat-y 0 0;
   padding: 32px 64px;
@@ -3502,9 +3503,30 @@ footer .address {
 #a-result .box .content td {
   color: #666;
   border-top: 0 none;
+  padding: 0.5rem 0.75rem;
 }
 
 #a-result .box .content td {
   width: 33.33%;
   color: #888;
+  text-align: right;
+}
+
+#a-result .box {
+  position: relative;
+}
+
+#a-result .box .wt {
+  font-family: monospace;
+  font-size: 1.66rem;
+  position: absolute;
+  z-index: 0;
+  color: rgba(50, 25, 0, 0.1);
+  width: 80%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  left: 10%;
+  top: 42%;
+  transform: rotate(-40deg);
 }
