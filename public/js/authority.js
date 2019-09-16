@@ -1,11 +1,12 @@
-(function ($) {
-  var sn = $urlp('sn')
-  $('#a-query input').val(sn || '')
-  if (sn && sn.length === 24) {
+var $ = $ || window.jQuery
+$(document).ready(function () {
+  // eslint-disable-next-line no-undef
+  var SN = $urlp('sn')
+  $('#a-query input').val(SN || '')
+  if (SN && SN.length === 24) {
     $('#a-query').addClass('hide')
     $('#a-result').removeClass('hide')
-    $('#auth-sn').text(sn)
+    $('#auth-sn').text(SN)
     $('.box > .wt').text(new Date().toGMTString().replace('GMT', ''))
   }
-
-})(window.jQuery)
+})

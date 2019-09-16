@@ -11,8 +11,13 @@ footer .copyright {
   margin: 0;
 }
 
+.header-area {
+  position: relative;
+  height: auto;
+}
+
 .container.docs {
-  margin-top: 120px;
+  margin-top: 30px;
   margin-bottom: 30px;
   font-size: 0.9rem;
 }
@@ -39,7 +44,7 @@ footer .copyright {
   color: #364149;
   padding: 0;
   position: sticky;
-  top: 120px;
+  top: 0px;
 }
 
 .book-summary>h1 {
@@ -61,7 +66,8 @@ footer .copyright {
 .book-summary>ul li a,
 .book-summary>ul li span {
   display: block;
-  padding: 10px 0;
+  padding: 6px 0;
+  margin: 5px 0;
   border-bottom: none;
   color: #364149;
   background: 0 0;
@@ -86,6 +92,7 @@ footer .copyright {
   background: 0 0;
   text-decoration: none;
   opacity: 1;
+  border-right: 3px solid #2890c8;
 }
 
 .markdown-section {

@@ -1,38 +1,35 @@
-(function ($) {
-  menu_event()
+var $ = $ || window.jQuery
+$(document).ready(function () {
+  __menuEvent()
+  $(window).on('resize', function () { __menuEvent() })
 
-  if ($('.menu-trigger').length) {
-    $('.menu-trigger').on('click', function () {
-      $(this).toggleClass('active')
-      $('.header-area .nav').slideToggle(200)
-    })
-  }
+  $('.menu-trigger').on('click', function () {
+    $(this).toggleClass('active')
+    $('.header-area .nav').slideToggle(200)
+  })
 
-  $(window).on('load', function () {
+  if ($('.parallax').length > 0) {
     $('.parallax').parallax({
       imgSrc: $('.parallax').data('image-src'),
       zIndex: 1
     })
-  })
-  $(window).on('resize', function () {
-    menu_event()
-  })
-
-  function menu_event() {
-    var h = $(window).width()
-    $('.submenu').on('click', function () {
-      if (h < 992) {
-        $('.submenu ul').removeClass('active')
-        $(this).find('ul').toggleClass('active')
-      }
-    })
   }
+})
 
-})(window.jQuery)
+function __menuEvent() {
+  var h = $(window).width()
+  $('.submenu').on('click', function () {
+    if (h < 992) {
+      $('.submenu ul').removeClass('active')
+      $(this).find('ul').toggleClass('active')
+    }
+  })
+}
 
 // 获取 URL 参数
+// eslint-disable-next-line no-unused-vars
 var $urlp = function (p) {
-  var query = location.search.substring(1)
+  var query = location.search.substring(1) || ''
   var vars = query.split('&')
   for (var i = 0; i < vars.length; i++) {
     var pair = vars[i].split('=')
