@@ -17,6 +17,19 @@ let NAV_HTML
   })
 })()
 
+router.get('/images/*', function (req, res) {
+  let path = req.path
+  path = `${__dirname}/../docs${path}`
+  fs.readFile(path, function (err, data) {
+    if (err) {
+      errorHandler(req, res)
+    } else {
+      res.setHeader('Cache-Control', 'public, max-age=7776000')
+      res.end(data)
+    }
+  })
+})
+
 router.get('/*', function (req, res) {
   let path = req.path
   if (path.endsWith('/')) path += 'index.md'
