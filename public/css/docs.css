@@ -357,8 +357,9 @@ footer .copyright {
   margin-bottom: 0.85em;
   padding: 0 15px;
   color: #858585;
-  border-left: 4px solid #e5e5e5;
-  border-radius: 0;
+  border-left: 4px solid rgb(247, 125, 5);
+  border-radius: 3px;
+  background-color: rgb(245, 247, 249);
 }
 
 .markdown-section blockquote:first-child {

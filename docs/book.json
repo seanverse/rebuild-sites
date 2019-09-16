@@ -1,0 +1,10 @@
+{
+  "title": "REBUILD 帮助文档",
+  "author": "devezhao <zhaofang123@gmail.com>",
+  "description": "RB document for end-user",
+  "language": "zh-hans",
+  "root": ".",
+  "structure": {
+    "readme": "index.md"
+  }
+}

@@ -1,2 +1,0 @@
-# GitBook
-for GitBook only
