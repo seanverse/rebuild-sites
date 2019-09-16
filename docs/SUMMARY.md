@@ -10,7 +10,7 @@
     * [系统配置](admin/general.md)
     * [用户管理](admin/users.md)
     * [权限角色](admin/privileges.md)
-    * [业务实体](admin/metaentity.md)
+    * [业务实体](admin/meta-entity.md)
     * [数据导入](admin/data-import.md)
     * [触发器](admin/triggers.md)
     * [审批流程](admin/approval.md)
