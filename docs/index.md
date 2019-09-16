@@ -15,14 +15,14 @@ RB 提供了业务实体构建、权限管理、流程管理、数据审计、�
 
 ### 双重许可
 
-RB 使用 [GPL3.0](https://www.gnu.org/licenses/gpl-3.0.html) 开源许可和商业许可双重授权。对于非盈利目的的使用，仅需遵循 GPL3.0 协议。若出于商业目的使用请购买 RB 商业授权。
+RB 是一款开源产品，使用 [GPL3.0](https://raw.githubusercontent.com/getrebuild/rebuild/master/LICENSE) 和 [商用](https://raw.githubusercontent.com/getrebuild/rebuild/master/COMMERCIAL) 双重授权许可，您应当认真阅读并同意许可内容。非盈利目或企业内部可免费使用，其它情况请购买 REBUILD 商业授权。
 
 
 ### 免责声明
 
 用户明确同意其使用 RB 系统或服务所存在的风险将完全由其自己承担。因其使用 RB 系统或服务而产生的一切后果也由其自己承担，RB 及其开发成员对用户不承担任何责任。
 
-如果用户希望得到更好的保障，请考虑购买我们的 [商业授权](https://getrebuild.com/#pricing-plans) 版本。
+如果用户希望得到更好的服务与保障，请考虑购买我们的 [商业授权](https://getrebuild.com/#pricing-plans) 版本。
 
 
 ## 帮助文档

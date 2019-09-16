@@ -14,6 +14,7 @@
     * [数据导入](admin/data-import.md)
     * [触发器](admin/triggers.md)
     * [审批流程](admin/approval.md)
+    * [数据审计](admin/auditing.md)
 * [开发人员](dev/index.md)
 * [更新日志](dev/changelog.md)
 
