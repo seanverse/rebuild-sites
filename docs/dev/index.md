@@ -3,7 +3,7 @@
 
 ## 获取源码
 
-RB 源码托关于 GitHub，主页是 [getrebuild/rebuild](https://github.com/getrebuild/rebuild) 。如果你只想使用而非获取源码进行二次开发，可以直接下载最新的 [发行版本](https://github.com/getrebuild/rebuild/releases) 后进行 [安装](../manual/install)。
+RB 源码托关于 GitHub，主页是 [getrebuild/rebuild](https://github.com/getrebuild/rebuild) 。如果你只想使用而非获取源码进行二次开发，可以直接下载最新的 [发行版本](https://getrebuild.com/download) 后进行 [安装](../admin/install.md)。
 
 
 ## 环境准备
@@ -91,9 +91,9 @@ mvn clean jetty:run -Drbpass=PASSKEY
 启动完成后可以通过 [http://127.0.0.1:18080/rebuild/](http://127.0.0.1:18080/rebuild/) 进行访问。请注意此功能仅为快速预览而设计，任何时候都不应该将其作为开发或是产品部署使用。
 
 
-## 使用 Eclipse 开发
+## 使用 Eclipse/IDEA 开发
 
-RB 是一个标准的 Maven 项目，请直接使用 Eclipse 的导入功能，将 RB 作为 Maven 项目导入即可。同时我们建议将 `.eclipse/` 目录下的 Eclipse 配置文件复制到项目根目录下使用。当然，这不是必须的。
+RB 是一个标准的 Maven 项目，请直接使用 Eclipse/IDEA 的导入功能，将其作为 Maven 项目导入即可。
 
 
 ## 遇到问题

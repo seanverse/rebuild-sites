@@ -32,8 +32,8 @@ router.get('/images/*', function (req, res) {
 
 router.get('/*', function (req, res) {
   let path = req.path
-  if (path.endsWith('/')) path += 'index.md'
-  else path += '.md'
+  if (path.endsWith('/')) path += 'index'
+  if (!path.endsWith('.md')) path += '.md'
   path = `${__dirname}/../docs/${path}`
 
   let options = {

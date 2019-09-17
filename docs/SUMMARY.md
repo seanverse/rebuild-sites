@@ -5,10 +5,9 @@
     * [基本操作](manual/basic.md)
     * [分派与共享](manual/shares.md)
     * [高级查询](manual/adv-filter.md)
-    * [首页仪表盘](manual/dashboard.md)
 * 管理员手册
     * [安装](admin/install.md)
-    * [系统配置](admin/general.md)
+    * [系统配置](admin/systems.md)
     * [用户管理](admin/users.md)
     * [权限角色](admin/privileges.md)
     * [业务实体](admin/meta-entity.md)
