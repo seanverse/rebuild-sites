@@ -4,7 +4,6 @@
 * 用户手册
     * [基本操作](manual/basic.md)
     * [分派与共享](manual/shares.md)
-    * [高级查询](manual/adv-filter.md)
 * 管理员手册
     * [安装](admin/install.md)
     * [系统配置](admin/systems.md)
