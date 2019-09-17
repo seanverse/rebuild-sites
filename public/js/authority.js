@@ -6,7 +6,7 @@ $(document).ready(function () {
   if (SN && SN.length === 24) {
     $('#a-query').addClass('hide')
     $('#a-result').removeClass('hide')
-    $('#auth-sn').text(SN)
+    $('#auth-sn').text(SN.toUpperCase())
     $('.box > .wt').text(new Date().toGMTString().replace('GMT', ''))
   }
 })
