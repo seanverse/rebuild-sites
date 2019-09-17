@@ -5,7 +5,7 @@ const md = require('markdown-it')()
 const createError = require('http-errors')
 
 const Cache = require('cache')
-const docsCache = new Cache(1000 * 60 * 5)  // 5min
+const docsCache = new Cache(1000 * 60 * 120)  // 2h
 
 let NAV_HTML
 (() => {
