@@ -18,7 +18,7 @@ REBUILD 依赖以下软件环境，在开始安装前请确保已经准备好以
 
 ## 下载 RB 安装包
 
-你可以到 [RB 官网](https://getrebuild.com/download) 下载最新版安装包，也可以至 RB 的 [GitHub 项目](https://github.com/getrebuild/rebuild/) 页下载。一般情况下每个版本我们会同时提供源码和二进制安装包，安装包通常以 `-release.zip` 结尾。
+你可以到 [RB 官网](https://getrebuild.com/download) 下载最新版安装包，也可以至 RB 的 [GitHub 项目](https://github.com/getrebuild/rebuild/) 页下载。一般情况下每个版本我们会同时提供源码和二进制安装包，安装包的名字通常为 `rebuild-standalone-xyz.zip` （其中 `xyz` 表示版本号）。
 
 
 
@@ -33,3 +33,4 @@ REBUILD 依赖以下软件环境，在开始安装前请确保已经准备好以
 > 如果启动失败，系统会定向到服务状态页面，并显示原因。如下图所示
 
 ![ServerStatue](../images/F9AF4255-2777-4001-BE62-0B2A33913ED1.png)
+
