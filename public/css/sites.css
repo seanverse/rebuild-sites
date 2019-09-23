@@ -763,6 +763,7 @@ header
 
 .header-area.header-sticky .logo {
   margin-top: 25px;
+  margin-top: 26px;
 }
 
 .header-area.header-sticky .nav {
@@ -3430,6 +3431,7 @@ preloader
 a.logo>img,
 img.logo {
   height: 32px;
+  height: 28px;
 }
 
 .oem-icon {

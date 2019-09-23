@@ -16,6 +16,28 @@ footer .copyright {
   height: auto;
 }
 
+/* FULL HEADER */
+@media (min-width: 768px) {
+  .header-area.header-sticky {
+    background-color: #fff;
+    box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+    border-bottom: 1px solid #d4dadf;
+  }
+
+  .header-area .main-nav {
+    box-shadow: 0 0 0 #000;
+  }
+
+  .header-area .main-nav .logo {
+    margin-left: 0;
+  }
+
+
+  .header-area .main-nav .nav {
+    margin-right: 0;
+  }
+}
+
 .container.docs {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -45,6 +67,7 @@ footer .copyright {
   padding: 0;
   position: sticky;
   top: 0px;
+  margin-right: -16px;
 }
 
 .book-summary>h1 {
@@ -60,14 +83,14 @@ footer .copyright {
 .book-summary>ul li {
   list-style: none;
   color: #aaa;
-  padding-left: 20px;
+  padding-left: 15px;
 }
 
 .book-summary>ul li a,
 .book-summary>ul li span {
   display: block;
-  padding: 7px 0;
-  margin: 6px 0;
+  padding: 10px 0;
+  margin: 0;
   border-bottom: none;
   color: #364149;
   background: 0 0;
@@ -76,6 +99,8 @@ footer .copyright {
   white-space: nowrap;
   position: relative;
   line-height: 1;
+  border: 1px solid transparent;
+  padding-left: 10px;
 }
 
 .book-summary>ul li ul li {
@@ -86,9 +111,12 @@ footer .copyright {
   border-left: 0px solid rgb(230, 236, 241)
 }
 
+.book-summary>ul li a {
+  color: rgb(92, 105, 117);
+}
+
 .book-summary>ul li a:hover {
-  color: #008cff;
-  color: #2890c8;
+  background-color: rgb(230, 236, 241);
 }
 
 .book-summary>ul li.active>a {
@@ -96,7 +124,8 @@ footer .copyright {
   background: 0 0;
   text-decoration: none;
   opacity: 1;
-  border-right: 3px solid #2890c8
+  background-color: #fff;
+  border: 1px solid rgb(230, 236, 241);
 }
 
 .markdown-section {
@@ -111,9 +140,21 @@ footer .copyright {
   -moz-text-size-adjust: 100%;
   padding-top: 6px;
   background: #fff;
-  padding: 30px 40px;
-  border-radius: 4px;
+  padding: 30px 50px;
   min-height: 100%;
+  border-top: 1px solid rgb(230, 236, 241);
+  border-bottom: 1px solid rgb(230, 236, 241);
+}
+
+@media (max-width: 768px) {
+  .container.docs {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .markdown-section {
+    padding: 20px 15px;
+  }
 }
 
 .markdown-section * {
@@ -267,7 +308,7 @@ footer .copyright {
   overflow: auto;
   word-wrap: normal;
   margin: 0;
-  padding: 0.85em 1em;
+  padding: 0.85em 1.2em;
   margin-bottom: 1.275em;
   background: #f7f7f7;
 }
@@ -362,7 +403,7 @@ footer .copyright {
   padding: 0 15px;
   color: #858585;
   border-left: 4px solid rgb(247, 125, 5);
-  border-radius: 3px;
+  border-radius: 0;
   background-color: rgb(245, 247, 249);
 }
 
@@ -414,9 +455,9 @@ footer .copyright {
 }
 
 .markdown-section p>img {
-  max-width: 100%;
+  max-width: 81%;
   display: inline-block;
-  margin: 10px auto;
-  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e5e5e5;
+  margin: 15px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
 }

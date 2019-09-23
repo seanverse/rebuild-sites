@@ -1,10 +1,10 @@
 # Summary
 
 * [介绍](index.md)
-* 用户手册
+* [用户手册](manual/basic.md)
     * [基本操作](manual/basic.md)
     * [分派与共享](manual/shares.md)
-* 管理员手册
+* [管理员手册](admin/install.md)
     * [安装](admin/install.md)
     * [系统配置](admin/systems.md)
     * [用户管理](admin/users.md)

@@ -1,7 +1,7 @@
 var $ = $ || window.jQuery
 $(document).ready(function () {
   var current = $('.book-summary a[href="' + location.pathname + '"]')
-  current.parent().addClass('active')
+  current.last().parent().addClass('active')
 
   $('.markdown-section p>img').each(function () {
     $(this).parent().addClass('text-center')
