@@ -2375,7 +2375,7 @@ pages
 .page .cover {
   margin-top: 0px;
   min-height: 305px;
-  min-height: 285px;
+  min-height: 250px;
   position: relative;
 }
 
@@ -2398,7 +2398,7 @@ pages
   width: 100%;
   z-index: 3;
   text-align: center;
-  top: 40%;
+  top: 49%;
   transform: perspective(1px) translateY(0%);
 }
 
@@ -2408,7 +2408,7 @@ pages
   line-height: 42px;
   color: #fff;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .page .cover .cover-top p {
@@ -2416,6 +2416,7 @@ pages
   font-size: 14px;
   color: #eaf3ff;
   line-height: 28px;
+  text-transform: uppercase;
 }
 
 .page .cover .cover-bottom {
@@ -2486,6 +2487,7 @@ pages
   line-height: 28px;
   color: #6f8ba4;
   background: #F5F7F9;
+  min-height: 500px;
 }
 
 .page .page-bottom p {

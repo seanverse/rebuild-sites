@@ -28,4 +28,11 @@ router.get('/authority', function (req, res) {
   })
 })
 
+router.get('/building-systems', function (req, res) {
+  res.render('building-systems', {
+    pretty: process.env.NODE_ENV === 'development',
+    title: '在线定制 · REBUILD'
+  })
+})
+
 module.exports = router
