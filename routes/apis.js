@@ -3,8 +3,8 @@ const express = require('express')
 const router = express.Router()
 const os = require('os')
 const request = require('request')
-const Cache = require('cache')
 
+const Cache = require('cache')
 const simpleCache = new Cache(5 * 60 * 1000)  // 5min
 
 const URL_REGEX = /^(http|https)\:\/\/[a-z0-9\-\.]+(:[0-9]*)?\/?([a-z0-9\-\._\?\,\'\/\\\+&amp;%\$#\=~!:])*$/i
@@ -121,6 +121,25 @@ router.get('/misc/bgimg', async function (req, res) {
       res.status(500).send({ error: err || 'Unknow error' })
     }
   })
+})
+
+// 发邮件
+router.post('/sites/requirement', async function (req, res) {
+  request.post({
+    url: 'https://api.mysubmail.com/mail/send.json',
+    body: {
+      appid: '14022',
+      signature: '428115fbdc40413c43a1e977a83c8a5a',
+      from: 'sites@smtp.getrebuild.com',
+      to: '406276067@qq.com',
+      subject: 'RB 新需求到达',
+      html: `<p>${JSON.stringify(req.body)}</p>`
+    },
+    json: true
+  }, (err, res, body) => {
+    console.log('>> ' + JSON.stringify(body))
+  })
+  res.sendStatus(200)
 })
 
 module.exports = router

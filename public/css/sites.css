@@ -3585,7 +3585,8 @@ footer .address {
 }
 
 .building-systems .nav .nav-item {
-  margin: 0 4px;
+  width: 49%;
+  margin: 0 0.5%;
 }
 
 .building-systems .nav .nav-item .nav-link {
@@ -3614,4 +3615,8 @@ footer .address {
 
 .building-systems .custom-control {
   margin: 6px 0;
+}
+
+.contact-bottom .contact-form input.error {
+  border-color: #dc3545;
 }
