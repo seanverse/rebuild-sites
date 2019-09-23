@@ -18,8 +18,37 @@ block content
                   a(href="/") 首页
                 li.active 在线定制
 
-    div.page-bottom
+    div.page-bottom.building-systems.contact-bottom
       div.container
-          div.row
-                      
-    script(src="/js/authority.js?v=20190916")
+        ul.nav.nav-pills.nav-fill
+          li.nav-item
+            a.nav-link.active(href="#module") 选择业务模块
+          li.nav-item
+            a.nav-link.dropdown-toggle.disabled(href="#solution" data-toggle="dropdown") 选择解决方案
+            div.dropdown-menu
+              a.dropdown-item(href="#sales") 销售
+              a.dropdown-item(href="#marketing") 营销
+              a.dropdown-item(href="#service") 服务
+
+        div.row#modules
+
+        div.row
+          div.col-lg-4.col-md-5.col-sm-12
+            h5.margin-bottom-30 获取专业支持
+            div.contact-text
+              p 信息提交后将由工程师与您接洽，为您提供专业的系统指导建议。
+              p 您提交的信息将受到严格保密，不会以任何形式泄露给第三方。
+
+          div.col-lg-8.col-md-7.col-sm-12
+            div.contact-form
+              div.row
+                div.col-lg-6.col-md-12.col-sm-12
+                  input(type="text" placeholder="您的称呼")
+                div.col-lg-6.col-md-12.col-sm-12
+                  input(type="text" placeholder="联系方式 (邮箱或电话)")
+                div.col-lg-12
+                  textarea(placeholder="附加内容")
+                div.col-lg-12
+                  button.btn-primary-line 提交
+
+    script(src="/js/building-systems.js?v=20190923")
