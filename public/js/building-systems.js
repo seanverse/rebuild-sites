@@ -52,7 +52,7 @@ $(document).ready(function () {
     })
   }
 
-  $('#coSubmit').click(function () {
+  var sbtn = $('#coSubmit').click(function () {
     var ms = []
     $('#modules input:checked').each(function () {
       ms.push($(this).attr('id'))
@@ -66,8 +66,9 @@ $(document).ready(function () {
     if (!_data.name) { $('#coName').addClass('error').focus(); return }
     if (!_data.number) { $('#coNumber').addClass('error').focus(); return }
 
+    sbtn.attr({ disabled: true }).html('<i class="fa fa-spinner fa-spin"></i>')
     $.post('/api/sites/requirement', (_data), function () {
-      alert('信息已提交')
+      setTimeout(function () { sbtn.html('<i class="fa fa-check"></i> 信息已提交') }, 500)
     })
   })
 })
