@@ -11,6 +11,12 @@ const pages = {
 
 router.get('/*', function (req, res) {
   let path = req.path.substr(1) || 'index'
+
+  if (path == 'robots.txt') {
+    res.send('User-agent: *\nAllow: /')
+    return
+  }
+
   if (path == 'contact') path = 'about'
   res.render(path, {
     pretty: process.env.NODE_ENV === 'development',
