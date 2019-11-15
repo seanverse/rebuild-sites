@@ -6,7 +6,7 @@ html
     meta(name="keywords", content= keywords || "REBUILD,RB,GETREBUILD,CRM,OA,ERP,MIS,CRM系统,企业管理,业务系统,办公,企业中台")
     title= title || "帮助文档 · REBUILD"
     include _head.pug
-    link(rel="stylesheet", href="/css/docs.css?v=20190916")
+    link(rel="stylesheet", href="/css/docs.css?v=191115")
   body
     //- header
     header.header-area.header-sticky
@@ -27,6 +27,8 @@ html
           div.col-12.col-lg-2.col-md-3.book-nav.d-none.d-md-block
             div.book-summary !{nav_content}
           div.col-12.col-lg-10.col-md-9
+            a.github-url(target="_blank", href= githubUrl)
+              i.fa.fa-github.fa-fw
             div.markdown-section !{doc_content}
 
     //- footer
@@ -38,4 +40,4 @@ html
             div.copyright
               p &copy; 2019 REBUILD 版权所有 · 沪ICP备15028736号
               
-    script(src="/js/docs.js?v=20190916")
+    script(src="/js/docs.js?v=191115")

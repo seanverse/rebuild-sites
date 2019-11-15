@@ -10,7 +10,7 @@ const simpleCache = new Cache(5 * 60 * 1000)  // 5min
 const URL_REGEX = /^(http|https)\:\/\/[a-z0-9\-\.]+(:[0-9]*)?\/?([a-z0-9\-\._\?\,\'\/\\\+&amp;%\$#\=~!:])*$/i
 
 // 统一认证
-router.get('*', (req, res, next) => {
+router.get('/*', (req, res, next) => {
   let allowed = (req.headers.referer || '').includes('getrebuild.com') || req.query.k === 'IjkMHgq94T7s7WkP'
     || process.env.NODE_ENV === 'development'
   if (!allowed) {

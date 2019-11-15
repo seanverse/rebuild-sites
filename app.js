@@ -22,9 +22,9 @@ app.use(express.urlencoded({
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use('/', indexRouter)
 app.use('/docs', docsRouter)
 app.use('/api', apisRouter)
+app.use('/', indexRouter)
 
 // error handler
 const errorHandler = function (req, res) {

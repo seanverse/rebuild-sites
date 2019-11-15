@@ -1,37 +1,20 @@
 var express = require('express')
 var router = express.Router()
 
-router.get('/', function (req, res) {
-  res.render('index', {
-    pretty: process.env.NODE_ENV === 'development'
-  })
-})
+const pages = {
+  'index': ['高度可定制化的企业管理系统'],
+  'download': ['产品下载'],
+  'about': ['关于我们'],
+  'authority': ['授权查询'],
+  'building-systems': ['在线定制'],
+}
 
-router.get('/download', function (req, res) {
-  res.render('download', {
+router.get('/*', function (req, res) {
+  let path = req.path.substr(1) || 'index'
+  if (path == 'contact') path = 'about'
+  res.render(path, {
     pretty: process.env.NODE_ENV === 'development',
-    title: '产品下载 · REBUILD'
-  })
-})
-
-router.get('/about', function (req, res) {
-  res.render('about', {
-    pretty: process.env.NODE_ENV === 'development',
-    title: '关于我们 · REBUILD'
-  })
-})
-
-router.get('/authority', function (req, res) {
-  res.render('authority', {
-    pretty: process.env.NODE_ENV === 'development',
-    title: '授权查询 · REBUILD'
-  })
-})
-
-router.get('/building-systems', function (req, res) {
-  res.render('building-systems', {
-    pretty: process.env.NODE_ENV === 'development',
-    title: '在线定制 · REBUILD'
+    title: pages[path] + ' · REBUILD'
   })
 })
 

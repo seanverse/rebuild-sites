@@ -32,17 +32,20 @@ router.get('/images/*', function (req, res) {
 
 router.get('/*', function (req, res) {
   let path = req.path
-  if (path.endsWith('/')) path += 'index'
+  if (path.endsWith('/')) path += 'index.md'
   if (!path.endsWith('.md')) path += '.md'
-  path = `${__dirname}/../docs/${path}`
+
+  const filePath = `${__dirname}/../docs${path}`
+  const editUrl = `https://github.com/getrebuild/rebuild-sites/edit/master/docs${path}`
 
   let options = {
     pretty: process.env.NODE_ENV === 'development',
     nav_content: NAV_HTML,
+    githubUrl: editUrl,
     html: true
   }
 
-  let c = docsCache.get(path)
+  let c = docsCache.get(filePath)
   if (process.env.NODE_ENV === 'development') c = null
   if (c) {
     options.doc_content = c
@@ -50,15 +53,16 @@ router.get('/*', function (req, res) {
     return
   }
 
-  fs.readFile(path, 'utf-8', (err, content) => {
+  fs.readFile(filePath, 'utf-8', (err, content) => {
     if (err) {
       errorHandler(req, res)
       return
     }
 
     let result = md.render(content)
+    result = result.replace(/.md"/g, '"')  // Remove `.md`
     options.doc_content = result
-    docsCache.put(path, result)
+    docsCache.put(filePath, result)
     res.render('docs', options)
   })
 })
