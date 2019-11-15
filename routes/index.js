@@ -13,6 +13,7 @@ router.get('/*', function (req, res) {
   let path = req.path.substr(1) || 'index'
 
   if (path == 'robots.txt') {
+    res.header('Content-Type', 'text/plain;charset=UTF-8')
     res.send('User-agent: *\nAllow: /')
     return
   }
