@@ -277,7 +277,8 @@ body {
 }
 
 .btn-primary-line {
-  width: 160px;
+  min-width: 160px;
+  padding: 0 20px;
   margin: auto;
   display: inline-block;
   height: 44px;
@@ -3595,6 +3596,7 @@ footer .address {
 
 .building-systems h3.head-title {
   margin: 30px 0;
+  margin-bottom: 10px;
 }
 
 .building-systems #modules {
@@ -3606,6 +3608,10 @@ footer .address {
   min-height: 300px;
 }
 
+.building-systems #modules>div {
+  margin-bottom: 25px;
+}
+
 .building-systems #modules h5 {
   font-size: 16px;
   border-bottom: 1px solid rgb(230, 236, 241);
@@ -3615,6 +3621,14 @@ footer .address {
 
 .building-systems .custom-control {
   margin: 6px 0;
+}
+
+.building-systems #modules li>p {
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.6;
+  color: #777;
+  display: none;
 }
 
 .contact-bottom .contact-form input.error {

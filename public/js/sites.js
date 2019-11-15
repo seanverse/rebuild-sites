@@ -14,6 +14,11 @@ $(document).ready(function () {
       zIndex: 1
     })
   }
+
+
+  if (location.href.indexOf('/download') > -1) {
+    setTimeout(function () { location.href = 'https://github.com/getrebuild/rebuild/releases' }, 2000)
+  }
 })
 
 function __menuEvent() {

@@ -1,11 +1,20 @@
 # 更新日志
 
-> RB 遵循 [SemVer 2.0](https://semver.org/lang/zh-CN/) 版本发布与命名规范。并保证后续 Major 版本可以无缝升级。
+> RB 遵循 [SemVer 2.0](https://semver.org/) 版本发布与命名规范。保证后续 Minor 版本可以无缝升级。
 
+### [v1.6 (2019.11.01)](https://github.com/getrebuild/rebuild/pulls?utf8=✓&q=milestone%3Av1.6)
 
-## V1
+- [新增] 列表 WIDGETS - 过滤条件和图表
+- [新增] 仪表盘预置组件 - 我的审批
+- [新增] 文件预览支持音频/视频
+- [新增] 外部网址安全提示
+- [新增] 多选字段
+- [优化] 列表头支持固定
+- [优化] 配置共享支持共享给指定人员
+- [优化] 分类字段支持搜索
+- [优化] 20+ Bugfixs 和细节优化
 
-### [1.5.0 (2019.09.15)](https://github.com/getrebuild/rebuild/pulls?utf8=✓&q=milestone%3Av1.5)
+### [v1.5 (2019.09.15)](https://github.com/getrebuild/rebuild/pulls?utf8=✓&q=milestone%3Av1.5)
 
 - [新增] 记录修改历史/回收站
 - [新增] 图片/Office 文档在线预览
@@ -14,9 +23,9 @@
 - [新增] 自动分派与共享
 - [新增] 重复记录判断
 - [优化] 字段默认值全局生效
-- [优化] 30+ Bug Fixed 和细节优化
+- [优化] 30+ Bugfixs 和细节优化
 
-### [1.4.0 (2019.08.03)](https://github.com/getrebuild/rebuild/pulls?utf8=✓&q=milestone%3Av1.4)
+### [v1.4 (2019.08.03)](https://github.com/getrebuild/rebuild/pulls?utf8=✓&q=milestone%3Av1.4)
 
 - [新增] 审批流程
 - [新增] 数字型字段支持允许负数选项
@@ -25,9 +34,9 @@
 - [新增] OpenAPI 基础框架
 - [优化] 消息通知分类
 - [优化] 视图组件化
-- [优化] 20+ Bug Fixed 和细节优化
+- [优化] 20+ Bugfixs 和细节优化
 
-### [1.3.0 (2019.06.12)](https://github.com/getrebuild/rebuild/pulls?utf8=✓&q=milestone%3Av1.3)
+### [v1.3 (2019.06.12)](https://github.com/getrebuild/rebuild/pulls?utf8=✓&q=milestone%3Av1.3)
 
 - [新增] 业务规则触发器
 - [新增] 表单自动回填 (针对引用字段)
@@ -38,9 +47,9 @@
 - [优化] 分类数据
 - [优化] 部分页面布局
 - [优化] 系统配置缓存重构
-- [优化] 20+ Bug Fixed 和细节优化
+- [优化] 20+ Bugfixs 和细节优化
 
-### [1.2.0 (2019.05.10)](https://github.com/getrebuild/rebuild/pulls?utf8=✓&q=milestone%3Av1.2)
+### [v1.2 (2019.05.10)](https://github.com/getrebuild/rebuild/pulls?utf8=✓&q=milestone%3Av1.2)
 
 - [新增] 本地文件存储
 - [新增] 实体在线安装
@@ -51,7 +60,7 @@
 - [优化] 数据导入
 - [优化] 快速搜索及高级查询组件
 
-### [1.1.0 (2019.04.12)](https://github.com/getrebuild/rebuild/pulls?utf8=✓&q=milestone%3Av1.1)
+### [v1.1 (2019.04.12)](https://github.com/getrebuild/rebuild/pulls?utf8=✓&q=milestone%3Av1.1)
 
 - [新增] 分类字段
 - [新增] 字段默认值设置
@@ -61,6 +70,6 @@
 - [优化] 邮件发送 HTML 模板
 - [其他] 丰富测试用例
 
-### 1.0.0 (2019.01.31)
+### v1.0 (2019.01.31)
 
 - 首发版本 Hello RB!
