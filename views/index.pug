@@ -26,13 +26,13 @@ block content
                 div.icon
                   i.fa.fa-github
                 h5.features-title 免费开源
-                p RB 的源代码是 100% 完全开放的，你可在 GPL3.0 许可协议内自由修改使用
+                p RB 的源代码是 100% 完全开放的，你可在 GPL-3.0 许可协议内自由修改使用
             div.col-lg-4.col-md-6.col-sm-6.col-12
               a.features-small-item
                 div.icon
                   i.fa.fa-thumbs-o-up
                 h5.features-title 自由设计
-                p 提供基础平台是 RB 的初衷，因此你可以快速方便的根据自身业务设计出专属系统
+                p 提供平台是 RB 的初衷，因此你可以快速方便的根据自身业务设计出专属系统
             div.col-lg-4.col-md-6.col-sm-6.col-12
               a.features-small-item
                 div.icon
@@ -80,32 +80,62 @@ block content
               p RB 拥有众多强大的功能特性，能够满足企业日常经营所需。同时我们保持不断的更新迭代，推出更多新特性，并持续优化现有特性。
         div.row
           div.col-lg-2.col-md-3.col-sm-6.col-6
-            a.mini-box
+            a.mini-box(href="/docs/admin/meta-entity")
               i.fa.fa-cubes
               strong 业务实体
-              span 自由搭建，快速适应需求变化
+              span 模块自由搭建，快速适应需求变化
           div.col-lg-2.col-md-3.col-sm-6.col-6
-            a.mini-box
+            a.mini-box(href="/docs/admin/privileges")
               i.fa.fa-bolt
               strong 权限管理
               span 灵活控制，分级权限有条不紊
           div.col-lg-2.col-md-3.col-sm-6.col-6
-            a.mini-box
-              i.fa.fa-check
-              strong 数据审计
-              span 跟踪数据历史，不惧任何数据纰漏
-          div.col-lg-2.col-md-3.col-sm-6.col-6
-            a.mini-box
+            a.mini-box(href="/docs/admin/approval")
               i.fa.fa-usb.fa-rotate-90
               strong 审批流程
               span 可视化设计，支持多分支流程控制
           div.col-lg-2.col-md-3.col-sm-6.col-6
-            a.mini-box
+            a.mini-box(href="/docs/")
+              i.fa.fa-pie-chart
+              strong 数据分析
+              span 各类分析图表，挖掘数据价值
+          div.col-lg-2.col-md-3.col-sm-6.col-6
+            a.mini-box(href="/docs/")
+              i.fa.fa-file-excel-o
+              strong 报表设计
+              span 基于Excel的报表设计，套打很简单
+          div.col-lg-2.col-md-3.col-sm-6.col-6
+            a.mini-box(href="/docs/")
+              i.fa.fa-cloud
+              strong 文档管理
+              span 附件自动归档，重要资料集中管理
+          div.col-lg-2.col-md-3.col-sm-6.col-6
+            a.mini-box(href="/docs/")
+              i.fa.fa-circle-o-notch.fa-rotate-90
+              strong 企业微博
+              span 轻松拥有企业自己的分享交流平台
+          div.col-lg-2.col-md-3.col-sm-6.col-6
+            a.mini-box(href="/docs/admin/auditing")
+              i.fa.fa-check
+              strong 数据审计
+              span 跟踪数据历史，不惧任何数据纰漏
+          div.col-lg-2.col-md-3.col-sm-6.col-6
+            a.mini-box(href="/docs/admin/triggers")
               i.fa.fa-cogs
               strong 业务规则
               span 自由设计，轻松适配企业业务规则
           div.col-lg-2.col-md-3.col-sm-6.col-6
-            a.mini-box
+            a.mini-box(href="/docs/")
+              i.fa.fa-object-group
+              strong 自定义布局
+              span 千人千面，适应不同职能部门
+          div.col-lg-2.col-md-3.col-sm-6.col-6
+            a.mini-box(href="/docs/admin/data-import")
+              i.fa.fa-exchange
+              strong 导入导出
+              span 数据迁移、数据整理，事半功倍
+          div.col-lg-2.col-md-3.col-sm-6.col-6
+            a.mini-box(href="/docs/")
               i.fa.fa-code
               strong 开放接口
               span 外部系统轻松对接，打破信息孤岛
@@ -119,7 +149,7 @@ block content
             h2.section-title 开始使用
         div.offset-lg-2.col-lg-8
           div.center-text
-            p RB 是一款开源产品，使用 <a href="https://raw.githubusercontent.com/getrebuild/rebuild/master/LICENSE">GPL3.0</a> 和 <a href="https://raw.githubusercontent.com/getrebuild/rebuild/master/COMMERCIAL">商用</a> 双重授权许可，您应当认真阅读并同意许可内容。非盈利目或企业内部可免费使用，其它情况请购买 REBUILD 商业授权。
+            p RB 是一款开源产品，使用 <a href="https://raw.githubusercontent.com/getrebuild/rebuild/master/LICENSE">GPL-3.0</a> 和 <a href="https://raw.githubusercontent.com/getrebuild/rebuild/master/COMMERCIAL">商用</a> 双重授权许可，您应当认真阅读并同意许可内容。非盈利目或企业内部可免费使用，其它情况请购买 REBUILD 商业授权。
       div.row
         div.col-lg-4.col-md-6.col-sm-12
           div.pricing-item
@@ -131,14 +161,14 @@ block content
                 span.price 0
                 span.period
               ul.list
-                li.active GPL3.0
+                li.active GPL-3.0
                 li.active 非盈利用途
                 li.active 版本更新 (Major)
                 li.active GitHub 支持
                 li -
                 li -
             div.pricing-footer
-              a.btn-primary-line(href="https://github.com/getrebuild/rebuild/") 立即使用
+              a.btn-primary-line(href="/docs/admin/install") 下载安装
         div.col-lg-4.col-md-6.col-sm-12
           div.pricing-item
             div.pricing-header
@@ -156,7 +186,7 @@ block content
                 li.active 提供培训服务
                 li.active 不可二次分发
             div.pricing-footer
-              a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=购买商业版") 立即购买
+              a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=Business") 立即购买
         div.col-lg-4.col-md-6.col-sm-12
           div.pricing-item
             div.pricing-header
@@ -174,13 +204,13 @@ block content
                 li.active 提供培训服务
                 li.active 可二次分发
             div.pricing-footer
-              a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=购买 OEM 版") 立即购买
+              a.btn-primary-line(href="mailto:getrebuild@sina.com?subject=OEM") 立即购买
       div.row
         div.offset-lg-2.col-lg-8
           div.center-text.margin-bottom-0
             div(style="margin:20px 0")
               span.oem-icon
                 i.fa.fa-building
-            p.margin-bottom-0 对于没有开发能力的企业客户，我们也支持定制开发服务，详情请 <a href="mailto:getrebuild@sina.com?subject=定制开发">联系我们</a>
+            p.margin-bottom-0 对于没有开发能力的企业客户，我们也支持定制开发服务，详情请 <a href="mailto:getrebuild@sina.com?subject=Custom">联系我们</a>
 
     <script src="//cdn.staticfile.org/parallax.js/1.5.0/parallax.min.js"></script>
