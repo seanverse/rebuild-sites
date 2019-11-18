@@ -2,7 +2,8 @@ const express = require('express')
 const router = express.Router()
 const fs = require('fs')
 const md = require('markdown-it')()
-const createError = require('http-errors')
+
+const { errorHandler } = require('./_common')
 
 const Cache = require('cache')
 const docsCache = new Cache(1000 * 60 * 120)  // 2h
@@ -22,7 +23,7 @@ router.get('/images/*', function (req, res) {
   path = `${__dirname}/../docs${path}`
   fs.readFile(path, function (err, data) {
     if (err) {
-      errorHandler(req, res)
+      errorHandler(err, req, res)
     } else {
       res.setHeader('Cache-Control', 'public, max-age=7776000')
       res.end(data)
@@ -55,7 +56,7 @@ router.get('/*', function (req, res) {
 
   fs.readFile(filePath, 'utf-8', (err, content) => {
     if (err) {
-      errorHandler(req, res)
+      errorHandler(err, req, res)
       return
     }
 
@@ -67,13 +68,5 @@ router.get('/*', function (req, res) {
   })
 })
 
-// error handler
-const errorHandler = function (req, res) {
-  let err = createError(404)
-  res.locals.message = err.message
-  res.locals.error = req.app.get('env') === 'development' ? err : {}
-  res.status(err.status || 500)
-  res.render('error')
-}
 
 module.exports = router

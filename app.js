@@ -1,12 +1,12 @@
 const express = require('express')
 const path = require('path')
-const createError = require('http-errors')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 
 const indexRouter = require('./routes/index')
 const docsRouter = require('./routes/docs')
 const apisRouter = require('./routes/apis')
+const { errorHandler } = require('./routes/_common')
 
 const app = express()
 
@@ -26,14 +26,6 @@ app.use('/docs', docsRouter)
 app.use('/api', apisRouter)
 app.use('/', indexRouter)
 
-// error handler
-const errorHandler = function (req, res) {
-  let err = createError(404)
-  res.locals.message = err.message
-  res.locals.error = req.app.get('env') === 'development' ? err : {}
-  res.status(err.status || 500)
-  res.render('error')
-}
 app.use(errorHandler)
 
 module.exports = app

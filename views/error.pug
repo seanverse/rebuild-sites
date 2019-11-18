@@ -2,7 +2,11 @@ doctype html
 html
   head
     title= 'REBUILD'
+    include _head.pug
   body
-    h3= message
-    h4 #{error.status} That's an error. That's all we know.
-    pre #{error.stack}
+    div.p-3
+      h4= message
+      h6.pt-2 That's an error. That's all we know.
+      pre #{error.stack}
+      div.pt-2.text-muted(style={ 'font-size':'13px' }) &copy; 2019 
+        a(href="/") REBUILD
