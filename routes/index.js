@@ -7,6 +7,7 @@ const pages = {
   'about': ['关于我们'],
   'authority': ['授权查询'],
   'building-systems': ['在线定制'],
+  'report-issue': ['提交问题'],
 }
 
 router.get('/*', function (req, res) {

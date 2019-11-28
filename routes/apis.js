@@ -142,4 +142,11 @@ router.post('/sites/requirement', async function (req, res) {
   res.sendStatus(200)
 })
 
+// 查授权
+router.get('/authority/query', function (req, res) {
+  let result = { sn: req.query.sn, authType: '开源社区版' }
+  if (!req.query.sn || req.query.sn.length != 24) result = { error: `无效 SN : ${req.query.sn}` }
+  res.send(result)
+})
+
 module.exports = router

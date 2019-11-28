@@ -1,7 +1,7 @@
 var $ = $ || window.jQuery
 $(document).ready(function () {
-  __menuEvent()
-  $(window).on('resize', function () { __menuEvent() })
+  __$menuevent()
+  $(window).on('resize', function () { __$menuevent() })
 
   $('.menu-trigger').on('click', function () {
     $(this).toggleClass('active')
@@ -15,13 +15,14 @@ $(document).ready(function () {
     })
   }
 
-
   if (location.href.indexOf('/download') > -1) {
-    setTimeout(function () { location.href = 'https://github.com/getrebuild/rebuild/releases' }, 2000)
+    setTimeout(function () { location.href = 'https://github.com/getrebuild/rebuild/releases' }, 1000)
+  } else if (location.href.indexOf('/report-issue') > -1) {
+    setTimeout(function () { location.href = 'https://github.com/getrebuild/rebuild/issues/new?title=' + $urlp('title') }, 1000)
   }
 })
 
-function __menuEvent() {
+function __$menuevent() {
   var h = $(window).width()
   $('.submenu').on('click', function () {
     if (h < 992) {
