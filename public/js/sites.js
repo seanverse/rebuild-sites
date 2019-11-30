@@ -18,7 +18,7 @@ $(document).ready(function () {
   if (location.href.indexOf('/download') > -1) {
     setTimeout(function () { location.href = 'https://github.com/getrebuild/rebuild/releases' }, 1000)
   } else if (location.href.indexOf('/report-issue') > -1) {
-    setTimeout(function () { location.href = 'https://github.com/getrebuild/rebuild/issues/new?title=' + $urlp('title') }, 1000)
+    setTimeout(function () { location.href = 'https://github.com/getrebuild/rebuild/issues/new?title=' + ($urlp('title') || '') }, 1000)
   }
 })
 
